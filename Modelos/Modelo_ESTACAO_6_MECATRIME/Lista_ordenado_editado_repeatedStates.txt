@@ -1,0 +1,471 @@
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=0 flag_ST6[2]=0 flag_ST6[3]=0 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=0 Order_ASRS=0 
+When you are in (Global==0), take transition SpecC_1.S0->SpecC_1.S1 { 1, d0!, w := w + 1 }
+ASRS_Esteira.S0->ASRS_Esteira.S0 { Base != 0 && Order_ASRS == 0, d0?, sc1 := 0, Base := Base - 1, Order_ASRS := 1, PID_ASRS := 2 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=0 flag_ST6[2]=0 flag_ST6[3]=0 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==88 && sc1==Global && Global==88), take transition SpecC_1.S1->SpecC_1.S0 { 1, a0!, w := w + 1 }
+SpecS_G001.S1->SpecS_G001.S2 { k == 0 && k1 == 0 && sc1 == 88, a0?, k := 1, ss1 := 0, flag_ST6[PID_G1] := PID_ASRS, Order_ASRS := 0 }
+
+
+State: ( SpecS_G001.S2 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=0 flag_ST6[0]=2 flag_ST6[1]=0 flag_ST6[2]=0 flag_ST6[3]=0 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=0 
+When you are in (ss1-Global==-88 && Global==88), take transition SpecC_1.S0->SpecC_1.S1 { 1, d1!, w := w + 1 }
+ASRS_Esteira.S0->ASRS_Esteira.S0 { Cover != 0 && Order_ASRS == 0, d1?, sc1 := 0, Cover := Cover - 1, Order_ASRS := 1, PID_ASRS := 3 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=2 flag_ST6[1]=0 flag_ST6[2]=0 flag_ST6[3]=0 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (8<=sc1 && sc1<=18 && sc1-Global==-88), take transition SpecC_3.S0->SpecC_3.S0 { 1, b1!, w := w + 1 }
+SpecS_P061.S0->SpecS_P061.S1 { k == 0 && flag_ST6[PID_G3_2] == 0 && (flag_ST6[PID_G1] == 2 || flag_ST6[PID_G1] == 3), b1?, k := 1, ss4 := 0, flag_ST6[PID_G3_2] := flag_ST6[PID_G1], flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=0 flag_ST6[2]=0 flag_ST6[3]=2 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (16<=sc1 && sc1<=26 && sc1-Global==-88), take transition SpecC_7.S0->SpecC_7.S0 { 1, a1!, w := w + 1 }
+SpecS_G061.S0->SpecS_G061.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G3_2] == 2 || flag_ST6[PID_G3_2] == 3), a1?, k := 1, ss3 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G3_2] + 2, flag_ST6[PID_G3_2] := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=4 flag_ST6[1]=0 flag_ST6[2]=0 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (25<=sc1 && sc1<=35 && sc1-Global==-88), take transition Bloco_1_C.S0->Bloco_1_C.S0 { 1, c0!, w := w + 1 }
+Bloco_1_S.S0->Bloco_1_S.S1 { k == 0 && flag_ST6[PID_G1] == 4, c0?, bs1 := 0, k := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=0 flag_ST6[2]=0 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==88 && sc1-Global==-88 && Global==176), take transition SpecC_1.S1->SpecC_1.S0 { 1, a0!, w := w + 1 }
+SpecS_G001.S1->SpecS_G001.S2 { k == 0 && k1 == 0 && sc1 == 88, a0?, k := 1, ss1 := 0, flag_ST6[PID_G1] := PID_ASRS, Order_ASRS := 0 }
+
+
+State: ( SpecS_G001.S2 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=0 flag_ST6[0]=3 flag_ST6[1]=0 flag_ST6[2]=0 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (ss1==6 && ss1-Global==-176 && Global==182), take transition SpecC_1.S0->SpecC_1.S1 { 1, d0!, w := w + 1 }
+ASRS_Esteira.S0->ASRS_Esteira.S0 { Base != 0 && Order_ASRS == 0, d0?, sc1 := 0, Base := Base - 1, Order_ASRS := 1, PID_ASRS := 2 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=3 flag_ST6[1]=0 flag_ST6[2]=0 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==2 && sc1-Global==-182 && Global==184), take transition SpecC_3.S0->SpecC_3.S0 { 1, b1!, w := w + 1 }
+SpecS_P061.S0->SpecS_P061.S1 { k == 0 && flag_ST6[PID_G3_1] == 0 && (flag_ST6[PID_G1] == 2 || flag_ST6[PID_G1] == 3), b1?, k := 1, ss4 := 0, flag_ST6[PID_G3_1] := flag_ST6[PID_G1], flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=0 flag_ST6[2]=3 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==10 && sc1-Global==-182 && Global==192), take transition SpecC_7.S0->SpecC_7.S0 { 1, a1!, w := w + 1 }
+SpecS_G061.S0->SpecS_G061.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G3_1] == 2 || flag_ST6[PID_G3_1] == 3), a1?, k := 1, ss3 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G3_1] + 2, flag_ST6[PID_G3_1] := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=5 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==19 && sc1-Global==-182 && Global==201), take transition Bloco_2_C.S0->Bloco_2_C.S0 { 1, c1!, w := w + 1 }
+Bloco_2_S.S0->Bloco_2_S.S1 { flag_ST6[PID_G5] == 7 && flag_ST6[PID_G1] == 5 && k == 0, c1?, flag_ST6[PID_G1] := 0, bs2 := 0, k := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==88 && sc1-Global==-182 && Global==270), take transition SpecC_1.S1->SpecC_1.S0 { 1, a0!, w := w + 1 }
+SpecS_G001.S1->SpecS_G001.S2 { k == 0 && k1 == 0 && sc1 == 88, a0?, k := 1, ss1 := 0, flag_ST6[PID_G1] := PID_ASRS, Order_ASRS := 0 }
+
+
+State: ( SpecS_G001.S2 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=0 flag_ST6[0]=2 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=0 
+When you are in (ss1==7 && ss1-Global==-270 && Global==277), take transition SpecC_1.S0->SpecC_1.S1 { 1, d1!, w := w + 1 }
+ASRS_Esteira.S0->ASRS_Esteira.S0 { Cover != 0 && Order_ASRS == 0, d1?, sc1 := 0, Cover := Cover - 1, Order_ASRS := 1, PID_ASRS := 3 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=2 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==1 && sc1-Global==-277 && Global==278), take transition SpecC_4.S0->SpecC_4.S0 { 1, b2!, w := w + 1 }
+SpecS_P062.S0->SpecS_P062.S1 { k == 0 && flag_ST6[PID_G4_2] == 0 && (flag_ST6[PID_G1] == 2 || flag_ST6[PID_G1] == 3), b2?, k := 1, ss6 := 0, flag_ST6[PID_G4_2] := flag_ST6[PID_G1], flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=2 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==9 && sc1-Global==-277 && Global==286), take transition SpecC_8.S0->SpecC_8.S0 { 1, a2!, w := w + 1 }
+SpecS_G062.S0->SpecS_G062.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G4_2] == 2 || flag_ST6[PID_G4_2] == 3), a2?, k := 1, ss5 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G4_2] + 2, flag_ST6[PID_G4_2] := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=4 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==18 && sc1-Global==-277 && Global==295), take transition Bloco_1_C.S0->Bloco_1_C.S0 { 1, c0!, w := w + 1 }
+Bloco_1_S.S0->Bloco_1_S.S1 { k == 0 && flag_ST6[PID_G1] == 4, c0?, bs1 := 0, k := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S1 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=1 k2=0 Verify=0 flag_ST6[0]=4 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (57<=sc1 && sc1<=60 && sc1-bs1==18 && bs1-Global==-295 && Global-sc1==277), take transition Bloco_3_C.S0->Bloco_3_C.S0 { 1, c2!, w := w + 1 }
+Bloco_3_S.S0->Bloco_3_S.S1 { flag_ST6[PID_G2] == 9 && Verify == 0 && k2 == 0, c2?, k2 := 1, bs3 := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=1 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==71 && 11<=bs3 && sc1-Global==-277 && bs3<=14 && Global==348), take transition SpecC_7.S0->SpecC_7.S0 { 1, a1!, w := w + 1 }
+SpecS_G061.S0->SpecS_G061.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G3_2] == 1 || flag_ST6[PID_G3_2] == 10), a1?, k := 1, ss3 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G3_2], flag_ST6[PID_G3_2] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S1 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=1 Verify=0 flag_ST6[0]=1 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (71<=sc1 && sc1-ss3==71 && sc1-bs3<=60 && ss3-Global==-348 && bs3<=14 && Global-sc1==277), take transition SpecC_9.S0->SpecC_9.S0 { 1, d2!, w := w + 1 }
+Bloco_3_S.S1->Bloco_3_S.S2 { flag_ST6[PID_G1] == 1 && bs3 <= 14, d2?, flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=1 flag_ST6[0]=9 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==80 && sc1-Global==-277 && Global==357), take transition SpecC_4.S0->SpecC_4.S0 { 1, b2!, w := w + 1 }
+SpecS_P062.S0->SpecS_P062.S1 { k == 0 && flag_ST6[PID_G4_2] == 1 && flag_ST6[PID_G1] == 9 && Verify == 1, b2?, k := 1, ss6 := 0, flag_ST6[PID_G4_2] := 10, flag_ST6[PID_G1] := 0, Verify := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=0 flag_ST6[5]=10 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==88 && sc1-Global==-277 && Global==365), take transition SpecC_1.S1->SpecC_1.S0 { 1, a0!, w := w + 1 }
+SpecS_G001.S1->SpecS_G001.S2 { k == 0 && k1 == 0 && sc1 == 88, a0?, k := 1, ss1 := 0, flag_ST6[PID_G1] := PID_ASRS, Order_ASRS := 0 }
+
+
+State: ( SpecS_G001.S2 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=0 flag_ST6[0]=3 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=0 flag_ST6[5]=10 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (ss1==6 && ss1-Global==-365 && Global==371), take transition SpecC_1.S0->SpecC_1.S1 { 1, d0!, w := w + 1 }
+ASRS_Esteira.S0->ASRS_Esteira.S0 { Base != 0 && Order_ASRS == 0, d0?, sc1 := 0, Base := Base - 1, Order_ASRS := 1, PID_ASRS := 2 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=3 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=0 flag_ST6[5]=10 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==2 && sc1-Global==-371 && Global==373), take transition SpecC_3.S0->SpecC_3.S0 { 1, b1!, w := w + 1 }
+SpecS_P061.S0->SpecS_P061.S1 { k == 0 && flag_ST6[PID_G3_2] == 0 && (flag_ST6[PID_G1] == 2 || flag_ST6[PID_G1] == 3), b1?, k := 1, ss4 := 0, flag_ST6[PID_G3_2] := flag_ST6[PID_G1], flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=3 flag_ST6[4]=0 flag_ST6[5]=10 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==10 && sc1-Global==-371 && Global==381), take transition SpecC_7.S0->SpecC_7.S0 { 1, a1!, w := w + 1 }
+SpecS_G061.S0->SpecS_G061.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G3_2] == 2 || flag_ST6[PID_G3_2] == 3), a1?, k := 1, ss3 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G3_2] + 2, flag_ST6[PID_G3_2] := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=5 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=10 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==19 && sc1-Global==-371 && Global==390), take transition Bloco_2_C.S0->Bloco_2_C.S0 { 1, c1!, w := w + 1 }
+Bloco_2_S.S0->Bloco_2_S.S1 { flag_ST6[PID_G5] == 7 && flag_ST6[PID_G1] == 5 && k == 0, c1?, flag_ST6[PID_G1] := 0, bs2 := 0, k := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=10 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==88 && sc1-Global==-371 && Global==459), take transition SpecC_1.S1->SpecC_1.S0 { 1, a0!, w := w + 1 }
+SpecS_G001.S1->SpecS_G001.S2 { k == 0 && k1 == 0 && sc1 == 88, a0?, k := 1, ss1 := 0, flag_ST6[PID_G1] := PID_ASRS, Order_ASRS := 0 }
+
+
+State: ( SpecS_G001.S2 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=0 flag_ST6[0]=2 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=10 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=0 
+When you are in (ss1==5 && ss1-Global==-459 && Global==464), take transition SpecC_1.S0->SpecC_1.S1 { 1, d1!, w := w + 1 }
+ASRS_Esteira.S0->ASRS_Esteira.S0 { Cover != 0 && Order_ASRS == 0, d1?, sc1 := 0, Cover := Cover - 1, Order_ASRS := 1, PID_ASRS := 3 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=2 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=10 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==3 && sc1-Global==-464 && Global==467), take transition SpecC_4.S0->SpecC_4.S0 { 1, b2!, w := w + 1 }
+SpecS_P062.S0->SpecS_P062.S1 { k == 0 && flag_ST6[PID_G4_1] == 0 && (flag_ST6[PID_G1] == 2 || flag_ST6[PID_G1] == 3), b2?, k := 1, ss6 := 0, flag_ST6[PID_G4_1] := flag_ST6[PID_G1], flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=2 flag_ST6[5]=10 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==11 && sc1-Global==-464 && Global==475), take transition SpecC_8.S0->SpecC_8.S0 { 1, a2!, w := w + 1 }
+SpecS_G062.S0->SpecS_G062.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G4_2] == 1 || flag_ST6[PID_G4_2] == 10), a2?, k := 1, ss5 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G4_2], flag_ST6[PID_G4_2] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=10 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=2 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==20 && sc1-Global==-464 && Global==484), take transition SpecC_2.S0->SpecC_2.S0 { 1, b0!, w := w + 1 }
+SpecS_P001.S0->SpecS_P001.S1 { k == 0 && flag_ST6[PID_G1] == 10, b0?, k := 1, ss2 := 0, flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id30 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=2 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==26 && sc1-sc2==26 && sc2-Global==-490 && Global==490), take transition SpecC_8.S0->SpecC_8.S0 { 1, a2!, w := w + 1 }
+SpecS_G062.S0->SpecS_G062.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G4_1] == 2 || flag_ST6[PID_G4_1] == 3), a2?, k := 1, ss5 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G4_1] + 2, flag_ST6[PID_G4_1] := 1 }
+
+
+Igualdade - 32,80;
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id30 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=4 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==35 && sc1-sc2==26 && sc2-Global==-490 && Global==499), take transition Bloco_1_C.S0->Bloco_1_C.S0 { 1, c0!, w := w + 1 }
+Bloco_1_S.S0->Bloco_1_S.S1 { k == 0 && flag_ST6[PID_G1] == 4, c0?, bs1 := 0, k := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=0 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==88 && sc1-Global==-464 && Global==552), take transition SpecC_1.S1->SpecC_1.S0 { 1, a0!, w := w + 1 }
+SpecS_G001.S1->SpecS_G001.S2 { k == 0 && k1 == 0 && sc1 == 88, a0?, k := 1, ss1 := 0, flag_ST6[PID_G1] := PID_ASRS, Order_ASRS := 0 }
+
+
+State: ( SpecS_G001.S2 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=0 flag_ST6[0]=3 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=0 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (90<=sc1 && sc1<=91 && sc1-ss1==88 && ss1-Global==-552 && Global-sc1==464), take transition Bloco_3_C.S0->Bloco_3_C.S0 { 1, c2!, w := w + 1 }
+Bloco_3_S.S0->Bloco_3_S.S1 { flag_ST6[PID_G2] == 9 && Verify == 0 && k2 == 0, c2?, k2 := 1, bs3 := 0 }
+
+
+Igualdade - 35,83;
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=1 Verify=0 flag_ST6[0]=3 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=0 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && 5<=bs3 && Global==560 && bs3<=6), take transition SpecC_4.S0->SpecC_4.S0 { 1, b2!, w := w + 1 }
+SpecS_P062.S0->SpecS_P062.S1 { k == 0 && flag_ST6[PID_G4_2] == 0 && (flag_ST6[PID_G1] == 2 || flag_ST6[PID_G1] == 3), b2?, k := 1, ss6 := 0, flag_ST6[PID_G4_2] := flag_ST6[PID_G1], flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=1 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=3 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && 13<=bs3 && Global==568 && bs3<=14), take transition SpecC_7.S0->SpecC_7.S0 { 1, a1!, w := w + 1 }
+SpecS_G061.S0->SpecS_G061.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G3_2] == 1 || flag_ST6[PID_G3_2] == 10), a1?, k := 1, ss3 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G3_2], flag_ST6[PID_G3_2] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S1 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=1 Verify=0 flag_ST6[0]=1 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=3 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (ss3-sc1<-88 && ss3-bs3<=-13 && ss3-Global==-568 && bs3<=14), take transition SpecC_9.S0->SpecC_9.S0 { 1, d2!, w := w + 1 }
+Bloco_3_S.S1->Bloco_3_S.S2 { flag_ST6[PID_G1] == 1 && bs3 <= 14, d2?, flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S1 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=1 flag_ST6[0]=9 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=3 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (ss3==7 && ss3-Global==-568 && Global==575), take transition SpecC_1.S0->SpecC_1.S1 { 1, d0!, w := w + 1 }
+ASRS_Esteira.S0->ASRS_Esteira.S0 { Base != 0 && Order_ASRS == 0, d0?, sc1 := 0, Base := Base - 1, Order_ASRS := 1, PID_ASRS := 2 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=1 flag_ST6[0]=9 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=3 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==2 && sc1-Global==-575 && Global==577), take transition SpecC_4.S0->SpecC_4.S0 { 1, b2!, w := w + 1 }
+SpecS_P062.S0->SpecS_P062.S1 { k == 0 && flag_ST6[PID_G4_1] == 1 && flag_ST6[PID_G1] == 9 && Verify == 1, b2?, k := 1, ss6 := 0, flag_ST6[PID_G4_1] := 10, flag_ST6[PID_G1] := 0, Verify := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=10 flag_ST6[5]=3 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==10 && sc1-Global==-575 && Global==585), take transition SpecC_8.S0->SpecC_8.S0 { 1, a2!, w := w + 1 }
+SpecS_G062.S0->SpecS_G062.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G4_2] == 2 || flag_ST6[PID_G4_2] == 3), a2?, k := 1, ss5 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G4_2] + 2, flag_ST6[PID_G4_2] := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=5 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=10 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==19 && sc1-Global==-575 && Global==594), take transition Bloco_2_C.S0->Bloco_2_C.S0 { 1, c1!, w := w + 1 }
+Bloco_2_S.S0->Bloco_2_S.S1 { flag_ST6[PID_G5] == 7 && flag_ST6[PID_G1] == 5 && k == 0, c1?, flag_ST6[PID_G1] := 0, bs2 := 0, k := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=10 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==88 && sc1-Global==-575 && Global==663), take transition SpecC_1.S1->SpecC_1.S0 { 1, a0!, w := w + 1 }
+SpecS_G001.S1->SpecS_G001.S2 { k == 0 && k1 == 0 && sc1 == 88, a0?, k := 1, ss1 := 0, flag_ST6[PID_G1] := PID_ASRS, Order_ASRS := 0 }
+
+
+State: ( SpecS_G001.S2 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=0 flag_ST6[0]=2 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=10 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=0 
+When you are in (ss1==5 && ss1-Global==-663 && Global==668), take transition SpecC_1.S0->SpecC_1.S1 { 1, d1!, w := w + 1 }
+ASRS_Esteira.S0->ASRS_Esteira.S0 { Cover != 0 && Order_ASRS == 0, d1?, sc1 := 0, Cover := Cover - 1, Order_ASRS := 1, PID_ASRS := 3 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=2 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=10 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==3 && sc1-Global==-668 && Global==671), take transition SpecC_3.S0->SpecC_3.S0 { 1, b1!, w := w + 1 }
+SpecS_P061.S0->SpecS_P061.S1 { k == 0 && flag_ST6[PID_G3_2] == 0 && (flag_ST6[PID_G1] == 2 || flag_ST6[PID_G1] == 3), b1?, k := 1, ss4 := 0, flag_ST6[PID_G3_2] := flag_ST6[PID_G1], flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=2 flag_ST6[4]=10 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==11 && sc1-Global==-668 && Global==679), take transition SpecC_8.S0->SpecC_8.S0 { 1, a2!, w := w + 1 }
+SpecS_G062.S0->SpecS_G062.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G4_1] == 1 || flag_ST6[PID_G4_1] == 10), a2?, k := 1, ss5 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G4_1], flag_ST6[PID_G4_1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=10 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=2 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==20 && sc1-Global==-668 && Global==688), take transition SpecC_2.S0->SpecC_2.S0 { 1, b0!, w := w + 1 }
+SpecS_P001.S0->SpecS_P001.S1 { k == 0 && flag_ST6[PID_G1] == 10, b0?, k := 1, ss2 := 0, flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id30 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=2 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==26 && sc1-sc2==26 && sc2-Global==-694 && Global==694), take transition SpecC_7.S0->SpecC_7.S0 { 1, a1!, w := w + 1 }
+SpecS_G061.S0->SpecS_G061.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G3_2] == 2 || flag_ST6[PID_G3_2] == 3), a1?, k := 1, ss3 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G3_2] + 2, flag_ST6[PID_G3_2] := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id30 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=4 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==35 && sc1-sc2==26 && sc2-Global==-694 && Global==703), take transition Bloco_1_C.S0->Bloco_1_C.S0 { 1, c0!, w := w + 1 }
+Bloco_1_S.S0->Bloco_1_S.S1 { k == 0 && flag_ST6[PID_G1] == 4, c0?, bs1 := 0, k := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==88 && sc1-Global==-668 && Global==756), take transition SpecC_1.S1->SpecC_1.S0 { 1, a0!, w := w + 1 }
+SpecS_G001.S1->SpecS_G001.S2 { k == 0 && k1 == 0 && sc1 == 88, a0?, k := 1, ss1 := 0, flag_ST6[PID_G1] := PID_ASRS, Order_ASRS := 0 }
+
+
+State: ( SpecS_G001.S2 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=0 flag_ST6[0]=3 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (90<=sc1 && sc1<=91 && sc1-ss1==88 && ss1-Global==-756 && Global-sc1==668), take transition Bloco_3_C.S0->Bloco_3_C.S0 { 1, c2!, w := w + 1 }
+Bloco_3_S.S0->Bloco_3_S.S1 { flag_ST6[PID_G2] == 9 && Verify == 0 && k2 == 0, c2?, k2 := 1, bs3 := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=1 Verify=0 flag_ST6[0]=3 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && 5<=bs3 && Global==764 && bs3<=6), take transition SpecC_4.S0->SpecC_4.S0 { 1, b2!, w := w + 1 }
+SpecS_P062.S0->SpecS_P062.S1 { k == 0 && flag_ST6[PID_G4_1] == 0 && (flag_ST6[PID_G1] == 2 || flag_ST6[PID_G1] == 3), b2?, k := 1, ss6 := 0, flag_ST6[PID_G4_1] := flag_ST6[PID_G1], flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=1 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=3 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && 13<=bs3 && Global==772 && bs3<=14), take transition SpecC_7.S0->SpecC_7.S0 { 1, a1!, w := w + 1 }
+SpecS_G061.S0->SpecS_G061.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G3_2] == 1 || flag_ST6[PID_G3_2] == 10), a1?, k := 1, ss3 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G3_2], flag_ST6[PID_G3_2] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S1 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=1 Verify=0 flag_ST6[0]=1 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=3 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (ss3-sc1<-88 && ss3-bs3<=-13 && ss3-Global==-772 && bs3<=14), take transition SpecC_9.S0->SpecC_9.S0 { 1, d2!, w := w + 1 }
+Bloco_3_S.S1->Bloco_3_S.S2 { flag_ST6[PID_G1] == 1 && bs3 <= 14, d2?, flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S1 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=1 flag_ST6[0]=9 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=3 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (ss3==7 && ss3-Global==-772 && Global==779), take transition SpecC_1.S0->SpecC_1.S1 { 1, d0!, w := w + 1 }
+ASRS_Esteira.S0->ASRS_Esteira.S0 { Base != 0 && Order_ASRS == 0, d0?, sc1 := 0, Base := Base - 1, Order_ASRS := 1, PID_ASRS := 2 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=1 flag_ST6[0]=9 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=3 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==2 && sc1-Global==-779 && Global==781), take transition SpecC_3.S0->SpecC_3.S0 { 1, b1!, w := w + 1 }
+SpecS_P061.S0->SpecS_P061.S1 { k == 0 && flag_ST6[PID_G3_1] == 1 && flag_ST6[PID_G1] == 9 && Verify == 1, b1?, k := 1, ss4 := 0, flag_ST6[PID_G3_1] := 10, flag_ST6[PID_G1] := 0, Verify := 0 }
+null
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=0 flag_ST6[2]=10 flag_ST6[3]=0 flag_ST6[4]=3 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==10 && sc1-Global==-779 && Global==789), take transition SpecC_8.S0->SpecC_8.S0 { 1, a2!, w := w + 1 }
+SpecS_G062.S0->SpecS_G062.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G4_1] == 2 || flag_ST6[PID_G4_1] == 3), a2?, k := 1, ss5 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G4_1] + 2, flag_ST6[PID_G4_1] := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=5 flag_ST6[1]=0 flag_ST6[2]=10 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==19 && sc1-Global==-779 && Global==798), take transition Bloco_2_C.S0->Bloco_2_C.S0 { 1, c1!, w := w + 1 }
+Bloco_2_S.S0->Bloco_2_S.S1 { flag_ST6[PID_G5] == 7 && flag_ST6[PID_G1] == 5 && k == 0, c1?, flag_ST6[PID_G1] := 0, bs2 := 0, k := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=10 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==88 && sc1-Global==-779 && Global==867), take transition SpecC_1.S1->SpecC_1.S0 { 1, a0!, w := w + 1 }
+SpecS_G001.S1->SpecS_G001.S2 { k == 0 && k1 == 0 && sc1 == 88, a0?, k := 1, ss1 := 0, flag_ST6[PID_G1] := PID_ASRS, Order_ASRS := 0 }
+
+
+State: ( SpecS_G001.S2 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=0 flag_ST6[0]=2 flag_ST6[1]=9 flag_ST6[2]=10 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=0 
+When you are in (ss1==5 && ss1-Global==-867 && Global==872), take transition SpecC_1.S0->SpecC_1.S1 { 1, d1!, w := w + 1 }
+ASRS_Esteira.S0->ASRS_Esteira.S0 { Cover != 0 && Order_ASRS == 0, d1?, sc1 := 0, Cover := Cover - 1, Order_ASRS := 1, PID_ASRS := 3 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=2 flag_ST6[1]=9 flag_ST6[2]=10 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==3 && sc1-Global==-872 && Global==875), take transition SpecC_3.S0->SpecC_3.S0 { 1, b1!, w := w + 1 }
+SpecS_P061.S0->SpecS_P061.S1 { k == 0 && flag_ST6[PID_G3_2] == 0 && (flag_ST6[PID_G1] == 2 || flag_ST6[PID_G1] == 3), b1?, k := 1, ss4 := 0, flag_ST6[PID_G3_2] := flag_ST6[PID_G1], flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=10 flag_ST6[3]=2 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==11 && sc1-Global==-872 && Global==883), take transition SpecC_7.S0->SpecC_7.S0 { 1, a1!, w := w + 1 }
+SpecS_G061.S0->SpecS_G061.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G3_1] == 1 || flag_ST6[PID_G3_1] == 10), a1?, k := 1, ss3 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G3_1], flag_ST6[PID_G3_1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=10 flag_ST6[1]=9 flag_ST6[2]=0 flag_ST6[3]=2 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==20 && sc1-Global==-872 && Global==892), take transition SpecC_2.S0->SpecC_2.S0 { 1, b0!, w := w + 1 }
+SpecS_P001.S0->SpecS_P001.S1 { k == 0 && flag_ST6[PID_G1] == 10, b0?, k := 1, ss2 := 0, flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id30 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=0 flag_ST6[3]=2 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==26 && sc1-sc2==26 && sc2-Global==-898 && Global==898), take transition SpecC_7.S0->SpecC_7.S0 { 1, a1!, w := w + 1 }
+SpecS_G061.S0->SpecS_G061.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G3_2] == 2 || flag_ST6[PID_G3_2] == 3), a1?, k := 1, ss3 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G3_2] + 2, flag_ST6[PID_G3_2] := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id30 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=4 flag_ST6[1]=9 flag_ST6[2]=0 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==35 && sc1-sc2==26 && sc2-Global==-898 && Global==907), take transition Bloco_1_C.S0->Bloco_1_C.S0 { 1, c0!, w := w + 1 }
+Bloco_1_S.S0->Bloco_1_S.S1 { k == 0 && flag_ST6[PID_G1] == 4, c0?, bs1 := 0, k := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=0 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==88 && sc1-Global==-872 && Global==960), take transition SpecC_1.S1->SpecC_1.S0 { 1, a0!, w := w + 1 }
+SpecS_G001.S1->SpecS_G001.S2 { k == 0 && k1 == 0 && sc1 == 88, a0?, k := 1, ss1 := 0, flag_ST6[PID_G1] := PID_ASRS, Order_ASRS := 0 }
+
+
+State: ( SpecS_G001.S2 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=0 flag_ST6[0]=3 flag_ST6[1]=9 flag_ST6[2]=0 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (90<=sc1 && sc1<=91 && sc1-ss1==88 && ss1-Global==-960 && Global-sc1==872), take transition Bloco_3_C.S0->Bloco_3_C.S0 { 1, c2!, w := w + 1 }
+Bloco_3_S.S0->Bloco_3_S.S1 { flag_ST6[PID_G2] == 9 && Verify == 0 && k2 == 0, c2?, k2 := 1, bs3 := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=1 Verify=0 flag_ST6[0]=3 flag_ST6[1]=9 flag_ST6[2]=0 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && 5<=bs3 && Global==968 && bs3<=6), take transition SpecC_3.S0->SpecC_3.S0 { 1, b1!, w := w + 1 }
+SpecS_P061.S0->SpecS_P061.S1 { k == 0 && flag_ST6[PID_G3_1] == 0 && (flag_ST6[PID_G1] == 2 || flag_ST6[PID_G1] == 3), b1?, k := 1, ss4 := 0, flag_ST6[PID_G3_1] := flag_ST6[PID_G1], flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=1 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=3 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && 13<=bs3 && Global==976 && bs3<=14), take transition SpecC_7.S0->SpecC_7.S0 { 1, a1!, w := w + 1 }
+SpecS_G061.S0->SpecS_G061.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G3_2] == 1 || flag_ST6[PID_G3_2] == 10), a1?, k := 1, ss3 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G3_2], flag_ST6[PID_G3_2] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S1 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=1 Verify=0 flag_ST6[0]=1 flag_ST6[1]=9 flag_ST6[2]=3 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (ss3-sc1<-88 && ss3-bs3<=-13 && ss3-Global==-976 && bs3<=14), take transition SpecC_9.S0->SpecC_9.S0 { 1, d2!, w := w + 1 }
+Bloco_3_S.S1->Bloco_3_S.S2 { flag_ST6[PID_G1] == 1 && bs3 <= 14, d2?, flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S1 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=1 flag_ST6[0]=9 flag_ST6[1]=0 flag_ST6[2]=3 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (ss3==7 && ss3-Global==-976 && Global==983), take transition SpecC_1.S0->SpecC_1.S1 { 1, d0!, w := w + 1 }
+ASRS_Esteira.S0->ASRS_Esteira.S0 { Base != 0 && Order_ASRS == 0, d0?, sc1 := 0, Base := Base - 1, Order_ASRS := 1, PID_ASRS := 2 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=1 flag_ST6[0]=9 flag_ST6[1]=0 flag_ST6[2]=3 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==2 && sc1-Global==-983 && Global==985), take transition SpecC_4.S0->SpecC_4.S0 { 1, b2!, w := w + 1 }
+SpecS_P062.S0->SpecS_P062.S1 { k == 0 && flag_ST6[PID_G4_2] == 1 && flag_ST6[PID_G1] == 9 && Verify == 1, b2?, k := 1, ss6 := 0, flag_ST6[PID_G4_2] := 10, flag_ST6[PID_G1] := 0, Verify := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=0 flag_ST6[2]=3 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=10 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==10 && sc1-Global==-983 && Global==993), take transition SpecC_7.S0->SpecC_7.S0 { 1, a1!, w := w + 1 }
+SpecS_G061.S0->SpecS_G061.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G3_1] == 2 || flag_ST6[PID_G3_1] == 3), a1?, k := 1, ss3 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G3_1] + 2, flag_ST6[PID_G3_1] := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=5 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=10 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==19 && sc1-Global==-983 && Global==1002), take transition Bloco_2_C.S0->Bloco_2_C.S0 { 1, c1!, w := w + 1 }
+Bloco_2_S.S0->Bloco_2_S.S1 { flag_ST6[PID_G5] == 7 && flag_ST6[PID_G1] == 5 && k == 0, c1?, flag_ST6[PID_G1] := 0, bs2 := 0, k := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=10 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=1 
+When you are in (sc1==88 && sc1-Global==-983 && Global==1071), take transition SpecC_1.S1->SpecC_1.S0 { 1, a0!, w := w + 1 }
+SpecS_G001.S1->SpecS_G001.S2 { k == 0 && k1 == 0 && sc1 == 88, a0?, k := 1, ss1 := 0, flag_ST6[PID_G1] := PID_ASRS, Order_ASRS := 0 }
+
+
+State: ( SpecS_G001.S2 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=0 flag_ST6[0]=2 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=10 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=2 Order_ASRS=0 
+When you are in (ss1==5 && ss1-Global==-1071 && Global==1076), take transition SpecC_1.S0->SpecC_1.S1 { 1, d1!, w := w + 1 }
+ASRS_Esteira.S0->ASRS_Esteira.S0 { Cover != 0 && Order_ASRS == 0, d1?, sc1 := 0, Cover := Cover - 1, Order_ASRS := 1, PID_ASRS := 3 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=2 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=1 flag_ST6[5]=10 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==3 && sc1-Global==-1076 && Global==1079), take transition SpecC_3.S0->SpecC_3.S0 { 1, b1!, w := w + 1 }
+SpecS_P061.S0->SpecS_P061.S1 { k == 0 && flag_ST6[PID_G3_2] == 0 && (flag_ST6[PID_G1] == 2 || flag_ST6[PID_G1] == 3), b1?, k := 1, ss4 := 0, flag_ST6[PID_G3_2] := flag_ST6[PID_G1], flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=2 flag_ST6[4]=1 flag_ST6[5]=10 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==11 && sc1-Global==-1076 && Global==1087), take transition SpecC_8.S0->SpecC_8.S0 { 1, a2!, w := w + 1 }
+SpecS_G062.S0->SpecS_G062.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G4_2] == 1 || flag_ST6[PID_G4_2] == 10), a2?, k := 1, ss5 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G4_2], flag_ST6[PID_G4_2] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=10 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=2 flag_ST6[4]=1 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==20 && sc1-Global==-1076 && Global==1096), take transition SpecC_2.S0->SpecC_2.S0 { 1, b0!, w := w + 1 }
+SpecS_P001.S0->SpecS_P001.S1 { k == 0 && flag_ST6[PID_G1] == 10, b0?, k := 1, ss2 := 0, flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id30 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=2 flag_ST6[4]=1 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==26 && sc1-sc2==26 && sc2-Global==-1102 && Global==1102), take transition SpecC_7.S0->SpecC_7.S0 { 1, a1!, w := w + 1 }
+SpecS_G061.S0->SpecS_G061.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G3_2] == 2 || flag_ST6[PID_G3_2] == 3), a1?, k := 1, ss3 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G3_2] + 2, flag_ST6[PID_G3_2] := 1 }
+
+
+Igualdade - 32,80;
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id30 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=4 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==35 && sc1-sc2==26 && sc2-Global==-1102 && Global==1111), take transition Bloco_1_C.S0->Bloco_1_C.S0 { 1, c0!, w := w + 1 }
+Bloco_1_S.S0->Bloco_1_S.S1 { k == 0 && flag_ST6[PID_G1] == 4, c0?, bs1 := 0, k := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S1 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=1 k2=0 Verify=0 flag_ST6[0]=4 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=0 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (76<=sc1 && sc1<84 && sc1-bs1==35 && bs1-Global==-1111 && Global-sc1==1076), take transition Bloco_3_C.S0->Bloco_3_C.S0 { 1, c2!, w := w + 1 }
+Bloco_3_S.S0->Bloco_3_S.S1 { flag_ST6[PID_G2] == 9 && Verify == 0 && k2 == 0, c2?, k2 := 1, bs3 := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S1 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=1 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=0 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=1 
+When you are in (sc1==88 && 4<bs3 && sc1-Global==-1076 && bs3<=12 && Global==1164), take transition SpecC_1.S1->SpecC_1.S0 { 1, a0!, w := w + 1 }
+SpecS_G001.S1->SpecS_G001.S2 { k == 0 && k1 == 0 && sc1 == 88, a0?, k := 1, ss1 := 0, flag_ST6[PID_G1] := PID_ASRS, Order_ASRS := 0 }
+
+
+Igualdade - 35,83;
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=1 Verify=0 flag_ST6[0]=3 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=0 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && 12<bs3 && Global==1172 && bs3<=20), take transition SpecC_4.S0->SpecC_4.S0 { 1, b2!, w := w + 1 }
+SpecS_P062.S0->SpecS_P062.S1 { k == 0 && flag_ST6[PID_G4_2] == 0 && (flag_ST6[PID_G1] == 2 || flag_ST6[PID_G1] == 3), b2?, k := 1, ss6 := 0, flag_ST6[PID_G4_2] := flag_ST6[PID_G1], flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=1 flag_ST6[0]=9 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=1 flag_ST6[5]=3 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && Global==1180), take transition SpecC_4.S0->SpecC_4.S0 { 1, b2!, w := w + 1 }
+SpecS_P062.S0->SpecS_P062.S1 { k == 0 && flag_ST6[PID_G4_1] == 1 && flag_ST6[PID_G1] == 9 && Verify == 1, b2?, k := 1, ss6 := 0, flag_ST6[PID_G4_1] := 10, flag_ST6[PID_G1] := 0, Verify := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=10 flag_ST6[5]=3 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && Global==1188), take transition SpecC_8.S0->SpecC_8.S0 { 1, a2!, w := w + 1 }
+SpecS_G062.S0->SpecS_G062.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G4_2] == 2 || flag_ST6[PID_G4_2] == 3), a2?, k := 1, ss5 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G4_2] + 2, flag_ST6[PID_G4_2] := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=5 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=10 flag_ST6[5]=1 flag_ST6[6]=7 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && Global==1197), take transition Bloco_2_C.S0->Bloco_2_C.S0 { 1, c1!, w := w + 1 }
+Bloco_2_S.S0->Bloco_2_S.S1 { flag_ST6[PID_G5] == 7 && flag_ST6[PID_G1] == 5 && k == 0, c1?, flag_ST6[PID_G1] := 0, bs2 := 0, k := 1 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=10 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && Global==1266), take transition SpecC_8.S0->SpecC_8.S0 { 1, a2!, w := w + 1 }
+SpecS_G062.S0->SpecS_G062.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G4_1] == 1 || flag_ST6[PID_G4_1] == 10), a2?, k := 1, ss5 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G4_1], flag_ST6[PID_G4_1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S1 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=1 k1=0 k2=0 Verify=0 flag_ST6[0]=10 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (ss5<=2 && ss5-sc1<-88 && ss5-Global==-1266), take transition Bloco_3_C.S0->Bloco_3_C.S0 { 1, c2!, w := w + 1 }
+Bloco_3_S.S0->Bloco_3_S.S1 { flag_ST6[PID_G2] == 9 && Verify == 0 && k2 == 0, c2?, k2 := 1, bs3 := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S1 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=1 k2=1 Verify=0 flag_ST6[0]=10 flag_ST6[1]=9 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && 7<=bs3 && Global==1275 && bs3<=9), take transition SpecC_2.S0->SpecC_2.S0 { 1, b0!, w := w + 1 }
+SpecS_P001.S0->SpecS_P001.S1 { k == 0 && flag_ST6[PID_G1] == 10, b0?, k := 1, ss2 := 0, flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id30 ) k=0 k1=0 k2=0 Verify=1 flag_ST6[0]=9 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=1 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && 5<=sc2 && sc2<=7 && sc2-Global==-1281), take transition SpecC_3.S0->SpecC_3.S0 { 1, b1!, w := w + 1 }
+SpecS_P061.S0->SpecS_P061.S1 { k == 0 && flag_ST6[PID_G3_2] == 1 && flag_ST6[PID_G1] == 9 && Verify == 1, b1?, k := 1, ss4 := 0, flag_ST6[PID_G3_2] := 10, flag_ST6[PID_G1] := 0, Verify := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id30 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=10 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && 13<=sc2 && sc2<=15 && sc2-Global==-1281), take transition SpecC_7.S0->SpecC_7.S0 { 1, a1!, w := w + 1 }
+SpecS_G061.S0->SpecS_G061.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G3_2] == 1 || flag_ST6[PID_G3_2] == 10), a1?, k := 1, ss3 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G3_2], flag_ST6[PID_G3_2] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id30 ) k=0 k1=1 k2=0 Verify=0 flag_ST6[0]=10 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && sc2==24 && sc2-Global==-1281 && Global==1305), take transition SpecC_2.S0->SpecC_2.S0 { 1, b0!, w := w + 1 }
+SpecS_P001.S0->SpecS_P001.S1 { k == 0 && flag_ST6[PID_G1] == 10, b0?, k := 1, ss2 := 0, flag_ST6[PID_G1] := 0 }
+
+
+State: ( SpecS_G001.S1 SpecS_G061.S0 SpecS_G062.S0 ASRS_Esteira.S0 SpecS_P001.S0 SpecS_P061.S0 SpecS_P062.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 SpecC_4.S0 SpecC_7.S0 SpecC_8.S0 SpecC_9.S0 Bloco_1_S.S0 Bloco_2_S.S0 Bloco_3_S.S0 Bloco_1_C.S0 Bloco_2_C.S0 Bloco_3_C.S0 SpecS_Fim_de_Producao._id31 ) k=0 k1=0 k2=0 Verify=0 flag_ST6[0]=0 flag_ST6[1]=0 flag_ST6[2]=1 flag_ST6[3]=0 flag_ST6[4]=0 flag_ST6[5]=1 flag_ST6[6]=0 flag_ST6[7]=0 flag_ST6[8]=0 flag_ST6[9]=0 flag_ST6[10]=0 flag_ST6[11]=0 flag_ST6[12]=0 flag_ST6[13]=0 PID_G1=0 PID_G2=1 PID_G3_1=2 PID_G3_2=3 PID_G4_1=4 PID_G4_2=5 PID_G5=6 PID_G6=7 PID_G7=8 PID_G8=9 PID_ASRS=3 Order_ASRS=0 
+When you are in (88<sc1 && Global==1341), take transition SpecC_8.S0->SpecC_8.S0 { 1, a2!, w := w + 1 }
+SpecS_G062.S0->SpecS_G062.S1 { k == 0 && k1 == 0 && flag_ST6[PID_G1] == 0 && (flag_ST6[PID_G4_2] == 1 || flag_ST6[PID_G4_2] == 10), a2?, k := 1, ss5 := 0, flag_ST6[PID_G1] := flag_ST6[PID_G4_2], flag_ST6[PID_G4_2] := 0 }
+
+
+

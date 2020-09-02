@@ -1,0 +1,123 @@
+State: ( G1.I G2.I G3.I G4.B E1.S0 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) 
+When you are in (x4<10), take transition E6._id30->E6._id30 { 1, Psg!, 1 }
+G1.I->G1.B { 1, Psg?, x1 := 0, w := w + 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S0 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) 
+When you are in (x1<=x4 && x4<15 && x4-x1<10), take transition E6._id30->E6._id30 { 1, Pws!, 1 }
+G2.I->G2.B2 { 1, Pws?, x2 := 0, w := w + 1 }
+
+State: ( G1.B G2.B2 G3.I G4.B E1.S0 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) 
+When you are in (x1<=x4 && x2<15 && x2<=x1 && x4-x1<10 && x4-x2<15), take transition E3.S0->E3.S1 { 1, Mc!, 1 }
+G3.I->G3.B { 1, Mc?, x3 := 0, w := w + 1 }
+null
+
+State: ( G1.I G2.I G3.I G4.B E1.S1 E2.S2 E3.S1 E4.S1 E5.S0 E6._id30 R1.S0 ) 
+When you are in (75<=x4 && x4<90 && x4-y1<60 && y1-x4<=-50), take transition E4.S1->E4.S0 { 1, Dws!, 1 }
+G2.I->G2.B3 { 1, Dws?, x2 := 0, w := w + 1 }
+E2.S2->E2.S0 { 1, Dws?, 1 }
+
+State: ( G1.I G2.B3 G3.I G4.B E1.S2 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S0 ) 
+When you are in (10<x2 && 95<=x4 && x2-x4<=-75 && x4<105 && x4-x2<90), take transition E6._id30->E6._id30 { 1, Psg!, 1 }
+G1.I->G1.B { 1, Psg?, x1 := 0, w := w + 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S2 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S1 ) 
+When you are in (25<x1 && 115<=x4 && x1<30 && x4<130), take transition E1.S2->E1.S0 { 1, Dsg!, 1 }
+G2.I->G2.B1 { 1, Dsg?, x2 := 0, w := w + 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S0 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S2 ) 
+When you are in (45<x1 && 135<=x4 && x1<50 && x4<150), take transition R1.S2->R1.S0 { 1, Pc!, w := w + 1 }
+E3.S1->E3.S0 { 1, Pc?, 1 }
+E5.S0->E5.S1 { 1, Pc?, z := z + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S1 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) 
+When you are in (15<y1 && x4<20 && y1<=x4), take transition E6._id30->E6._id30 { 1, Pws!, 1 }
+G2.I->G2.B2 { 1, Pws?, x2 := 0, w := w + 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S0 E2.S0 E3.S0 E4.S0 E5.S1 E6._id30 R1.S0 ) 
+When you are in (45<x1 && x1<=50 && x4<=150), take transition E5.S1->E5.S0 { 1, tau, x4 := 0 }
+
+State: ( G1.I G2.B2 G3.I G4.B E1.S1 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) 
+When you are in (5<x2 && x2-y1<-15 && x4<25 && y1<=x4), take transition E6._id30->E6._id30 { 1, Psg!, 1 }
+G1.I->G1.B { 1, Psg?, x1 := 0, w := w + 1 }
+
+State: ( G1.B G2.B2 G3.I G4.B E1.S1 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) 
+When you are in (x1-x2<-5 && x2-y1<-15 && x4-x1<25 && y1<30 && y1<=x4), take transition E3.S0->E3.S1 { 1, Mc!, 1 }
+G3.I->G3.B { 1, Mc?, x3 := 0, w := w + 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S2 E2.S1 E3.S1 E4.S1 E5.S0 E6._id30 R1.S0 ) 
+When you are in (25<y2 && x1<=50 && x4-x1<25 && y2-x4<=-45), take transition E1.S2->E1.S0 { 1, Dsg!, 1 }
+G2.I->G2.B1 { 1, Dsg?, x2 := 0, w := w + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S1 E2.S2 E3.S1 E4.S1 E5.S0 E6._id30 R1.S3 ) 
+When you are in (35<y1 && x4<110 && y1-x4<=-65), take transition E4.S1->E4.S0 { 1, Dws!, 1 }
+G2.I->G2.B3 { 1, Dws?, x2 := 0, w := w + 1 }
+E2.S2->E2.S0 { 1, Dws?, 1 }
+
+State: ( G1.I G2.B3 G3.I G4.B E1.S2 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S3 ) 
+When you are in (x2<10 && x2-x4<=-75 && x4-x2<110), take transition E6._id30->E6._id30 { 1, Psg!, 1 }
+G1.I->G1.B { 1, Psg?, x1 := 0, w := w + 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S2 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S2 ) 
+When you are in (30<x1 && 115<=x4 && x1<=40 && x4<150), take transition E1.S2->E1.S0 { 1, Dsg!, 1 }
+G2.I->G2.B1 { 1, Dsg?, x2 := 0, w := w + 1 }
+
+State: ( G1.B G2.B1 G3.I G4.B E1.S0 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S2 ) 
+When you are in (30<x1 && 115<=x4 && x1<=40 && x2==0 && x4<150), take transition R1.S2->R1.S0 { 1, Pc!, w := w + 1 }
+E3.S1->E3.S0 { 1, Pc?, 1 }
+E5.S0->E5.S1 { 1, Pc?, z := z + 1 }
+
+State: ( G1.B G2.B1 G3.I G4.B E1.S0 E2.S0 E3.S0 E4.S0 E5.S1 E6._id30 R1.S0 ) 
+When you are in (30<x1 && x1<=40 && x2==0 && x4<=150), take transition E5.S1->E5.S0 { 1, tau, x4 := 0 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S1 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S3 ) 
+When you are in (15<y1 && x4<35 && y1-x4<=-10), take transition E6._id30->E6._id30 { 1, Pws!, 1 }
+G2.I->G2.B2 { 1, Pws?, x2 := 0, w := w + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S2 E3.S0 E4.S0 E5.S0 E6._id30 R1.S3 ) 
+When you are in (75<=x4 && x4<95), take transition E3.S0->E3.S1 { 1, Mc!, 1 }
+G3.I->G3.B { 1, Mc?, x3 := 0, w := w + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S1 E3.S0 E4.S0 E5.S0 E6._id30 R1.S3 ) 
+When you are in (30<y2 && x4<95 && y2-x4<=-55), take transition E3.S0->E3.S1 { 1, Mc!, 1 }
+G3.I->G3.B { 1, Mc?, x3 := 0, w := w + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S2 E3.S1 E4.S1 E5.S0 E6._id30 R1.S3 ) 
+When you are in (75<=x4 && x4<110), take transition E4.S1->E4.S0 { 1, Dws!, 1 }
+G2.I->G2.B3 { 1, Dws?, x2 := 0, w := w + 1 }
+E2.S2->E2.S0 { 1, Dws?, 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S2 ) 
+When you are in (115<=x4 && x4<150), take transition R1.S2->R1.S0 { 1, Pc!, w := w + 1 }
+E3.S1->E3.S0 { 1, Pc?, 1 }
+E5.S0->E5.S1 { 1, Pc?, z := z + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S0 E3.S0 E4.S0 E5.S1 E6._id30 R1.S0 ) 
+When you are in (x4<=150), take transition E5.S1->E5.S0 { 1, tau, x4 := 0 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) 
+When you are in (x4==0), take transition E6._id30->E6._id30 { 1, Pws!, 1 }
+G2.I->G2.B2 { 1, Pws?, x2 := 0, w := w + 1 }
+
+State: ( G1.I G2.B2 G3.I G4.B E1.S2 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) 
+When you are in (x2<15 && x2==x4), take transition E3.S0->E3.S1 { 1, Mc!, 1 }
+G3.I->G3.B { 1, Mc?, x3 := 0, w := w + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S1 E3.S1 E4.S1 E5.S0 E6._id30 R1.S0 ) 
+When you are in (30<=x4 && x4<=55 && x4-y2==30), take transition E6._id30->E6._id30 { 1, Psg!, 1 }
+G1.I->G1.B { 1, Psg?, x1 := 0, w := w + 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S2 E2.S1 E3.S1 E4.S1 E5.S0 E6._id30 R1.S0 ) 
+When you are in (x1-x4<=-30 && x4<=55 && x4-y2==30), take transition E1.S2->E1.S0 { 1, Dsg!, 1 }
+G2.I->G2.B1 { 1, Dsg?, x2 := 0, w := w + 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S0 E2.S2 E3.S1 E4.S1 E5.S0 E6._id30 R1.S3 ) 
+When you are in (10<x1 && x4==75 && x1<=45), take transition E4.S1->E4.S0 { 1, Dws!, 1 }
+G2.I->G2.B3 { 1, Dws?, x2 := 0, w := w + 1 }
+E2.S2->E2.S0 { 1, Dws?, 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S1 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S2 ) 
+When you are in (x4==115 && y1<=35), take transition R1.S2->R1.S0 { 1, Pc!, w := w + 1 }
+E3.S1->E3.S0 { 1, Pc?, 1 }
+E5.S0->E5.S1 { 1, Pc?, z := z + 1 }
+
+

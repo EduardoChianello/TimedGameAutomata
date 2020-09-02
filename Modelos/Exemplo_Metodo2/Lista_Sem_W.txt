@@ -1,0 +1,62 @@
+Strategy to win:
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=2 flag[0]=2 flag[1]=0 ID_R=0 ID_T=1 
+When you are in (g==1747), take transition C1.S0->C1.S0 { 1, place2!}
+Robo.S0->Robo.S4 { flag[ID_R] == 2 && place2?, t1 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=1 flag[0]=0 flag[1]=0 ID_R=0 ID_T=1 
+When you are in (g==589), take transition C1.S0->C1.S0 { 1, pick1!}
+Robo.S0->Robo.S1 { flag[ID_R] == 0 && pick1?, t1 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=2 flag[0]=0 flag[1]=0 ID_R=0 ID_T=1 
+When you are in (g==1178), take transition C1.S0->C1.S0 { 1, pick1!}
+Robo.S0->Robo.S1 { flag[ID_R] == 0 && pick1?, t1 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=0 flag[0]=0 flag[1]=2 ID_R=0 ID_T=1 
+When you are in (g==558), take transition C1.S0->C1.S0 { 1, pick2!}
+Robo.S0->Robo.S3 { flag[ID_R] == 0 && flag[ID_T] == 2 && pick2?, t1 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=0 flag[0]=2 flag[1]=0 ID_R=0 ID_T=1 
+When you are in (g==569), take transition C1.S0->C1.S0 { 1, place2!}
+Robo.S0->Robo.S4 { flag[ID_R] == 2 && place2?, t1 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=2 flag[0]=0 flag[1]=1 ID_R=0 ID_T=1 
+When you are in (g==1217), take transition C2.S0->C2.S0 { 1, run!}
+Torno.S0->Torno.S1 { flag[ID_T] == 1 && run?, t2 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=1 flag[0]=0 flag[1]=1 ID_R=0 ID_T=1 
+When you are in (g==628), take transition C2.S0->C2.S0 { 1, run!}
+Torno.S0->Torno.S1 { flag[ID_T] == 1 && run?, t2 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=0 flag[0]=0 flag[1]=0 ID_R=0 ID_T=1 
+When you are in (g==0), take transition C1.S0->C1.S0 { 1, pick1!}
+Robo.S0->Robo.S1 { flag[ID_R] == 0 && pick1?, t1 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=2 flag[0]=0 flag[1]=2 ID_R=0 ID_T=1 
+When you are in (g==1736), take transition C1.S0->C1.S0 { 1, pick2!}
+Robo.S0->Robo.S3 { flag[ID_R] == 0 && flag[ID_T] == 2 && pick2?, t1 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=1 flag[0]=0 flag[1]=2 ID_R=0 ID_T=1 
+When you are in (g==1147), take transition C1.S0->C1.S0 { 1, pick2!}
+Robo.S0->Robo.S3 { flag[ID_R] == 0 && flag[ID_T] == 2 && pick2?, t1 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=0 flag[0]=0 flag[1]=1 ID_R=0 ID_T=1 
+When you are in (g==39), take transition C2.S0->C2.S0 { 1, run!}
+Torno.S0->Torno.S1 { flag[ID_T] == 1 && run?, t2 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=1 flag[0]=2 flag[1]=0 ID_R=0 ID_T=1 
+When you are in (g==1158), take transition C1.S0->C1.S0 { 1, place2!}
+Robo.S0->Robo.S4 { flag[ID_R] == 2 && place2?, t1 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=0 flag[0]=1 flag[1]=0 ID_R=0 ID_T=1 
+When you are in (g==19), take transition C1.S0->C1.S0 { 1, place1!}
+Robo.S0->Robo.S2 { flag[ID_R] == 1 && flag[ID_T] == 0 && place1?, t1 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=2 flag[0]=1 flag[1]=0 ID_R=0 ID_T=1 
+When you are in (g==1197), take transition C1.S0->C1.S0 { 1, place1!}
+Robo.S0->Robo.S2 { flag[ID_R] == 1 && flag[ID_T] == 0 && place1?, t1 := 0 }
+
+State: ( Robo.S0 Torno.S0 C1.S0 C2.S0 ) P=1 flag[0]=1 flag[1]=0 ID_R=0 ID_T=1 
+When you are in (g==608), take transition C1.S0->C1.S0 { 1, place1!}
+Robo.S0->Robo.S2 { flag[ID_R] == 1 && flag[ID_T] == 0 && place1?, t1 := 0 }
+

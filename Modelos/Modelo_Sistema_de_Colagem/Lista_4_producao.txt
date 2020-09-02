@@ -1,0 +1,135 @@
+Options for the verification:
+  Generating some trace
+  Search order is breadth first (UPPAAL), automatic (TIGA)
+  Using conservative space optimisation
+  Seed is 1527414909
+  State space representation uses minimal constraint systems
+[2K
+Verifying property 1 at line 6
+ -- Throughput: 550 states/sec, Size: 62 states, Load: 22 states[K -- Throughput: 15466 states/sec, Size: 501 states, Load: 133 states[K -- Throughput: 20079 states/sec, Size: 3481 states, Load: 357 states[K -- Throughput: 17179 states/sec, Size: 27472 states, Load: 852 states[KPreparing: 0%[KPreparing: 1%[KPreparing: 2%[KPreparing: 3%[KPreparing: 4%[KPreparing: 5%[KPreparing: 6%[KPreparing: 7%[KPreparing: 8%[KPreparing: 9%[KPreparing: 10%[KPreparing: 11%[KPreparing: 12%[KPreparing: 13%[KPreparing: 14%[KPreparing: 15%[KPreparing: 16%[KPreparing: 17%[KPreparing: 18%[KPreparing: 19%[KPreparing: 20%[KPreparing: 21%[KPreparing: 22%[KPreparing: 23%[KPreparing: 24%[KPreparing: 25%[KPreparing: 26%[KPreparing: 27%[KPreparing: 28%[KPreparing: 29%[KPreparing: 30%[KPreparing: 31%[KPreparing: 32%[KPreparing: 33%[KPreparing: 34%[KPreparing: 35%[KPreparing: 36%[KPreparing: 37%[KPreparing: 38%[KPreparing: 39%[KPreparing: 40%[KPreparing: 41%[KPreparing: 42%[KPreparing: 43%[KPreparing: 44%[KPreparing: 45%[KPreparing: 46%[KPreparing: 47%[KPreparing: 48%[KPreparing: 49%[KPreparing: 50%[KPreparing: 51%[KPreparing: 52%[KPreparing: 53%[KPreparing: 54%[KPreparing: 55%[KPreparing: 56%[KPreparing: 57%[KPreparing: 58%[KPreparing: 59%[KPreparing: 60%[KPreparing: 61%[KPreparing: 62%[KPreparing: 63%[KPreparing: 64%[KPreparing: 65%[KPreparing: 66%[KPreparing: 67%[KPreparing: 68%[KPreparing: 69%[KPreparing: 70%[KPreparing: 71%[KPreparing: 72%[KPreparing: 73%[KPreparing: 74%[KPreparing: 75%[KPreparing: 76%[KPreparing: 77%[KPreparing: 78%[KPreparing: 79%[KPreparing: 80%[KPreparing: 81%[KPreparing: 82%[KPreparing: 83%[KPreparing: 84%[KPreparing: 85%[KPreparing: 86%[KPreparing: 87%[KPreparing: 88%[KPreparing: 89%[KPreparing: 90%[KPreparing: 91%[KPreparing: 92%[KPreparing: 93%[KPreparing: 94%[KPreparing: 95%[KPreparing: 96%[KPreparing: 97%[KPreparing: 98%[KPreparing: 99%[K[2K -- Property is satisfied.
+Initial state:
+( G1.I G2.I G3.I G4.B E1.S0 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) z=0 w=0 
+(x1==x2 && x2==x3 && x3==x4 && x4==y1 && y1==y2 && y2==x && x==t && t==E1.y && E1.y==0)
+
+Strategy to win:
+
+State: ( G1.I G2.I G3.I G4.B E1.S1 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S2 ) z=3 w=24 
+When you are in (x4==115 && y1<=35), take transition R1.S2->R1.S0 { 1, Pc!, w := w + 1 }
+E3.S1->E3.S0 { 1, Pc?, 1 }
+E5.S0->E5.S1 { 1, Pc?, z := z + 1 }
+
+State: ( G1.B G2.B1 G3.I G4.B E1.S0 E2.S0 E3.S0 E4.S0 E5.S1 E6._id30 R1.S0 ) z=2 w=15 
+When you are in (30<x1 && x1<=40 && x2==0 && x4<=150), take transition E5.S1->E5.S0 { 1, tau, x4 := 0 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S2 E2.S1 E3.S1 E4.S1 E5.S0 E6._id30 R1.S0 ) z=3 w=22 
+When you are in (x1-x4<=-30 && x4<=55 && x4-y2==30), take transition E1.S2->E1.S0 { 1, Dsg!, 1 }
+G2.I->G2.B1 { 1, Dsg?, x2 := 0, w := w + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S0 E3.S0 E4.S0 E5.S1 E6._id30 R1.S0 ) z=3 w=19 
+When you are in (x4<=150), take transition E5.S1->E5.S0 { 1, tau, x4 := 0 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S2 E3.S0 E4.S0 E5.S0 E6._id30 R1.S3 ) z=2 w=16 
+When you are in (75<=x4 && x4<95), take transition E3.S0->E3.S1 { 1, Mc!, 1 }
+G3.I->G3.B { 1, Mc?, x3 := 0, w := w + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S1 E2.S2 E3.S1 E4.S1 E5.S0 E6._id30 R1.S3 ) z=1 w=11 
+When you are in (35<y1 && x4<110 && y1-x4<=-65), take transition E4.S1->E4.S0 { 1, Dws!, 1 }
+G2.I->G2.B3 { 1, Dws?, x2 := 0, w := w + 1 }
+E2.S2->E2.S0 { 1, Dws?, 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S0 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S2 ) z=0 w=6 
+When you are in (45<x1 && 135<=x4 && x1<50 && x4<150), take transition R1.S2->R1.S0 { 1, Pc!, w := w + 1 }
+E3.S1->E3.S0 { 1, Pc?, 1 }
+E5.S0->E5.S1 { 1, Pc?, z := z + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S1 E3.S0 E4.S0 E5.S0 E6._id30 R1.S3 ) z=2 w=16 
+When you are in (30<y2 && x4<95 && y2-x4<=-55), take transition E3.S0->E3.S1 { 1, Mc!, 1 }
+G3.I->G3.B { 1, Mc?, x3 := 0, w := w + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S2 E3.S1 E4.S1 E5.S0 E6._id30 R1.S3 ) z=2 w=17 
+When you are in (75<=x4 && x4<110), take transition E4.S1->E4.S0 { 1, Dws!, 1 }
+G2.I->G2.B3 { 1, Dws?, x2 := 0, w := w + 1 }
+E2.S2->E2.S0 { 1, Dws?, 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S2 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S1 ) z=0 w=5 
+When you are in (25<x1 && 115<=x4 && x1<30 && x4<130), take transition E1.S2->E1.S0 { 1, Dsg!, 1 }
+G2.I->G2.B1 { 1, Dsg?, x2 := 0, w := w + 1 }
+
+State: ( G1.I G2.B2 G3.I G4.B E1.S2 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) z=3 w=20 
+When you are in (x2<15 && x2==x4), take transition E3.S0->E3.S1 { 1, Mc!, 1 }
+G3.I->G3.B { 1, Mc?, x3 := 0, w := w + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S2 ) z=2 w=18 
+When you are in (115<=x4 && x4<150), take transition R1.S2->R1.S0 { 1, Pc!, w := w + 1 }
+E3.S1->E3.S0 { 1, Pc?, 1 }
+E5.S0->E5.S1 { 1, Pc?, z := z + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) z=3 w=19 
+When you are in (x4==0), take transition E6._id30->E6._id30 { 1, Pws!, 1 }
+G2.I->G2.B2 { 1, Pws?, x2 := 0, w := w + 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S2 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S2 ) z=1 w=13 
+When you are in (30<x1 && 115<=x4 && x1<=40 && x4<150), take transition E1.S2->E1.S0 { 1, Dsg!, 1 }
+G2.I->G2.B1 { 1, Dsg?, x2 := 0, w := w + 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S2 E2.S1 E3.S1 E4.S1 E5.S0 E6._id30 R1.S0 ) z=1 w=10 
+When you are in (25<y2 && x1<=50 && x4-x1<25 && y2-x4<=-45), take transition E1.S2->E1.S0 { 1, Dsg!, 1 }
+G2.I->G2.B1 { 1, Dsg?, x2 := 0, w := w + 1 }
+
+State: ( G1.I G2.B2 G3.I G4.B E1.S1 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) z=1 w=8 
+When you are in (5<x2 && x2-y1<-15 && x4<25 && y1<=x4), take transition E6._id30->E6._id30 { 1, Psg!, 1 }
+G1.I->G1.B { 1, Psg?, x1 := 0, w := w + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S2 E2.S1 E3.S1 E4.S1 E5.S0 E6._id30 R1.S0 ) z=3 w=21 
+When you are in (30<=x4 && x4<=55 && x4-y2==30), take transition E6._id30->E6._id30 { 1, Psg!, 1 }
+G1.I->G1.B { 1, Psg?, x1 := 0, w := w + 1 }
+
+State: ( G1.B G2.B1 G3.I G4.B E1.S0 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S2 ) z=1 w=14 
+When you are in (30<x1 && 115<=x4 && x1<=40 && x2==0 && x4<150), take transition R1.S2->R1.S0 { 1, Pc!, w := w + 1 }
+E3.S1->E3.S0 { 1, Pc?, 1 }
+E5.S0->E5.S1 { 1, Pc?, z := z + 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S0 E2.S2 E3.S1 E4.S1 E5.S0 E6._id30 R1.S3 ) z=3 w=23 
+When you are in (10<x1 && x4==75 && x1<=45), take transition E4.S1->E4.S0 { 1, Dws!, 1 }
+G2.I->G2.B3 { 1, Dws?, x2 := 0, w := w + 1 }
+E2.S2->E2.S0 { 1, Dws?, 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S0 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) z=0 w=1 
+When you are in (x1<=x4 && x4<15 && x4-x1<10), take transition E6._id30->E6._id30 { 1, Pws!, 1 }
+G2.I->G2.B2 { 1, Pws?, x2 := 0, w := w + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S1 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) z=1 w=7 
+When you are in (15<y1 && x4<20 && y1<=x4), take transition E6._id30->E6._id30 { 1, Pws!, 1 }
+G2.I->G2.B2 { 1, Pws?, x2 := 0, w := w + 1 }
+
+State: ( G1.B G2.B2 G3.I G4.B E1.S1 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) z=1 w=9 
+When you are in (x1-x2<-5 && x2-y1<-15 && x4-x1<25 && y1<30 && y1<=x4), take transition E3.S0->E3.S1 { 1, Mc!, 1 }
+G3.I->G3.B { 1, Mc?, x3 := 0, w := w + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S1 E2.S2 E3.S1 E4.S1 E5.S0 E6._id30 R1.S0 ) z=0 w=3 
+When you are in (75<=x4 && x4<90 && x4-y1<60 && y1-x4<=-50), take transition E4.S1->E4.S0 { 1, Dws!, 1 }
+G2.I->G2.B3 { 1, Dws?, x2 := 0, w := w + 1 }
+E2.S2->E2.S0 { 1, Dws?, 1 }
+
+State: ( G1.B G2.I G3.I G4.B E1.S0 E2.S0 E3.S0 E4.S0 E5.S1 E6._id30 R1.S0 ) z=1 w=7 
+When you are in (45<x1 && x1<=50 && x4<=150), take transition E5.S1->E5.S0 { 1, tau, x4 := 0 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S1 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S3 ) z=2 w=15 
+When you are in (15<y1 && x4<35 && y1-x4<=-10), take transition E6._id30->E6._id30 { 1, Pws!, 1 }
+G2.I->G2.B2 { 1, Pws?, x2 := 0, w := w + 1 }
+
+State: ( G1.I G2.I G3.I G4.B E1.S0 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) z=0 w=0 
+When you are in (x4<10), take transition E6._id30->E6._id30 { 1, Psg!, 1 }
+G1.I->G1.B { 1, Psg?, x1 := 0, w := w + 1 }
+
+State: ( G1.I G2.B3 G3.I G4.B E1.S2 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S3 ) z=1 w=12 
+When you are in (x2<10 && x2-x4<=-75 && x4-x2<110), take transition E6._id30->E6._id30 { 1, Psg!, 1 }
+G1.I->G1.B { 1, Psg?, x1 := 0, w := w + 1 }
+
+State: ( G1.I G2.B3 G3.I G4.B E1.S2 E2.S0 E3.S1 E4.S0 E5.S0 E6._id30 R1.S0 ) z=0 w=4 
+When you are in (10<x2 && 95<=x4 && x2-x4<=-75 && x4<105 && x4-x2<90), take transition E6._id30->E6._id30 { 1, Psg!, 1 }
+G1.I->G1.B { 1, Psg?, x1 := 0, w := w + 1 }
+
+State: ( G1.B G2.B2 G3.I G4.B E1.S0 E2.S0 E3.S0 E4.S0 E5.S0 E6._id30 R1.S0 ) z=0 w=2 
+When you are in (x1<=x4 && x2<15 && x2<=x1 && x4-x1<10 && x4-x2<15), take transition E3.S0->E3.S1 { 1, Mc!, 1 }
+G3.I->G3.B { 1, Mc?, x3 := 0, w := w + 1 }

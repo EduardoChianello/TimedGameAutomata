@@ -1,0 +1,126 @@
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==0), take transition SpecC_1.S0->SpecC_1.S0 { 1, a1_L!, w := w + 1 }
+SpecS_1_LEL.S0->SpecS_1_LEL.S1 { flag[PID_R1] == 0 && k1 == 0, a1_L?, k1 := 1, x1 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=1 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==1), take transition SpecC_2.S0->SpecC_2.S0 { 1, b1_C1!, w := w + 1 }
+SpecS_2_PC1.S0->SpecS_2_PC1.S1 { flag[PID_R1] == 1 && flag[PID_PC1] == 0 && k1 == 0, b1_C1?, k1 := 1, x2 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S3 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=2 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==14), take transition SpecC_1.S0->SpecC_1.S0 { 1, a1_C1!, w := w + 1 }
+SpecS_2_PC1.S3->SpecS_2_PC1.S4 { flag[PID_R1] == 0 && flag[PID_PC1] == 2 && k1 == 0, a1_C1?, k1 := 1, x2 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=2 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==15), take transition SpecC_2.S0->SpecC_2.S0 { 1, b1_B!, w := w + 1 }
+SpecS_5_Buffer_b.S0->SpecS_5_Buffer_b.S1 { flag[PID_R1] == 2 && flag[PID_B] == 0 && k1 == 0, b1_B?, k1 := 1, x4 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=2 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==16), take transition SpecC_1.S0->SpecC_1.S0 { 1, a1_L!, w := w + 1 }
+SpecS_1_LEL.S0->SpecS_1_LEL.S1 { flag[PID_R1] == 0 && k1 == 0, a1_L?, k1 := 1, x1 := 0 }
+
+State: ( SpecS_1_LEL.S1 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=1 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=2 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (x1-Global==-16 && Global==16), take transition SpecC_3.S0->SpecC_3.S0 { 1, a2_B!, w := w + 1 }
+SpecS_4_Buffer_a.S0->SpecS_4_Buffer_a.S2 { flag[PID_R2] == 0 && flag[PID_B] == 2 && k2 == 0, a2_B?, k2 := 1, x4 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=1 flag[1]=2 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==17), take transition SpecC_2.S0->SpecC_2.S0 { 1, b1_C1!, w := w + 1 }
+SpecS_2_PC1.S0->SpecS_2_PC1.S1 { flag[PID_R1] == 1 && flag[PID_PC1] == 0 && k1 == 0, b1_C1?, k1 := 1, x2 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S1 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=1 k2=0 flag[0]=1 flag[1]=2 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (x2-Global==-17 && Global==17), take transition SpecC_3.S0->SpecC_3.S0 { 1, b2_C2!, w := w + 1 }
+SpecS_3_PC2.S0->SpecS_3_PC2.S1 { flag[PID_R2] == 2 && flag[PID_PC2] == 0 && k2 == 0, b2_C2?, k2 := 1, x3 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S3 SpecS_3_PC2.S3 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=2 flag[4]=3 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==30), take transition SpecC_3.S0->SpecC_3.S0 { 1, a2_C2!, w := w + 1 }
+SpecS_3_PC2.S3->SpecS_3_PC2.S4 { flag[PID_R2] == 0 && flag[PID_PC2] == 3 && k2 == 0, a2_C2?, k2 := 1, x3 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S3 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=3 flag[2]=0 flag[3]=2 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==31), take transition SpecC_3.S0->SpecC_3.S0 { 1, b2_B!, w := w + 1 }
+SpecS_5_Buffer_b.S0->SpecS_5_Buffer_b.S2 { flag[PID_R2] == 3 && flag[PID_B] == 0 && k2 == 0, b2_B?, k2 := 1, x4 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S3 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=2 flag[4]=0 flag[5]=3 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==32), take transition SpecC_1.S0->SpecC_1.S0 { 1, a1_B!, w := w + 1 }
+SpecS_4_Buffer_a.S0->SpecS_4_Buffer_a.S1 { flag[PID_R1] == 0 && flag[PID_B] == 3 && k1 == 0, a1_B?, k1 := 1, x4 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S3 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=3 flag[1]=0 flag[2]=0 flag[3]=2 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==33), take transition SpecC_2.S0->SpecC_2.S0 { 1, b1_L!, w := w + 1 }
+SpecS_1_LEL.S0->SpecS_1_LEL.S2 { flag[PID_R1] == 3 && k1 == 0, b1_L?, k1 := 1, x1 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S3 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=2 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==34), take transition SpecC_1.S0->SpecC_1.S0 { 1, a1_C1!, w := w + 1 }
+SpecS_2_PC1.S3->SpecS_2_PC1.S4 { flag[PID_R1] == 0 && flag[PID_PC1] == 2 && k1 == 0, a1_C1?, k1 := 1, x2 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=2 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==35), take transition SpecC_2.S0->SpecC_2.S0 { 1, b1_B!, w := w + 1 }
+SpecS_5_Buffer_b.S0->SpecS_5_Buffer_b.S1 { flag[PID_R1] == 2 && flag[PID_B] == 0 && k1 == 0, b1_B?, k1 := 1, x4 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=2 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==36), take transition SpecC_1.S0->SpecC_1.S0 { 1, a1_L!, w := w + 1 }
+SpecS_1_LEL.S0->SpecS_1_LEL.S1 { flag[PID_R1] == 0 && k1 == 0, a1_L?, k1 := 1, x1 := 0 }
+
+State: ( SpecS_1_LEL.S1 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=1 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=2 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (x1-Global==-36 && Global==36), take transition SpecC_3.S0->SpecC_3.S0 { 1, a2_B!, w := w + 1 }
+SpecS_4_Buffer_a.S0->SpecS_4_Buffer_a.S2 { flag[PID_R2] == 0 && flag[PID_B] == 2 && k2 == 0, a2_B?, k2 := 1, x4 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=1 flag[1]=2 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==37), take transition SpecC_2.S0->SpecC_2.S0 { 1, b1_C1!, w := w + 1 }
+SpecS_2_PC1.S0->SpecS_2_PC1.S1 { flag[PID_R1] == 1 && flag[PID_PC1] == 0 && k1 == 0, b1_C1?, k1 := 1, x2 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S1 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=1 k2=0 flag[0]=1 flag[1]=2 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (x2-Global==-37 && Global==37), take transition SpecC_3.S0->SpecC_3.S0 { 1, b2_C2!, w := w + 1 }
+SpecS_3_PC2.S0->SpecS_3_PC2.S1 { flag[PID_R2] == 2 && flag[PID_PC2] == 0 && k2 == 0, b2_C2?, k2 := 1, x3 := 0 }
+null
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S3 SpecS_3_PC2.S3 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=2 flag[4]=3 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==50), take transition SpecC_3.S0->SpecC_3.S0 { 1, a2_C2!, w := w + 1 }
+SpecS_3_PC2.S3->SpecS_3_PC2.S4 { flag[PID_R2] == 0 && flag[PID_PC2] == 3 && k2 == 0, a2_C2?, k2 := 1, x3 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S3 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=3 flag[2]=0 flag[3]=2 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==51), take transition SpecC_3.S0->SpecC_3.S0 { 1, b2_B!, w := w + 1 }
+SpecS_5_Buffer_b.S0->SpecS_5_Buffer_b.S2 { flag[PID_R2] == 3 && flag[PID_B] == 0 && k2 == 0, b2_B?, k2 := 1, x4 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S3 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=2 flag[4]=0 flag[5]=3 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==52), take transition SpecC_1.S0->SpecC_1.S0 { 1, a1_B!, w := w + 1 }
+SpecS_4_Buffer_a.S0->SpecS_4_Buffer_a.S1 { flag[PID_R1] == 0 && flag[PID_B] == 3 && k1 == 0, a1_B?, k1 := 1, x4 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S3 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=3 flag[1]=0 flag[2]=0 flag[3]=2 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==53), take transition SpecC_2.S0->SpecC_2.S0 { 1, b1_L!, w := w + 1 }
+SpecS_1_LEL.S0->SpecS_1_LEL.S2 { flag[PID_R1] == 3 && k1 == 0, b1_L?, k1 := 1, x1 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S3 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=2 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==54), take transition SpecC_1.S0->SpecC_1.S0 { 1, a1_C1!, w := w + 1 }
+SpecS_2_PC1.S3->SpecS_2_PC1.S4 { flag[PID_R1] == 0 && flag[PID_PC1] == 2 && k1 == 0, a1_C1?, k1 := 1, x2 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=2 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==55), take transition SpecC_2.S0->SpecC_2.S0 { 1, b1_B!, w := w + 1 }
+SpecS_5_Buffer_b.S0->SpecS_5_Buffer_b.S1 { flag[PID_R1] == 2 && flag[PID_B] == 0 && k1 == 0, b1_B?, k1 := 1, x4 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=2 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==56), take transition SpecC_3.S0->SpecC_3.S0 { 1, a2_B!, w := w + 1 }
+SpecS_4_Buffer_a.S0->SpecS_4_Buffer_a.S2 { flag[PID_R2] == 0 && flag[PID_B] == 2 && k2 == 0, a2_B?, k2 := 1, x4 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=2 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==57), take transition SpecC_3.S0->SpecC_3.S0 { 1, b2_C2!, w := w + 1 }
+SpecS_3_PC2.S0->SpecS_3_PC2.S1 { flag[PID_R2] == 2 && flag[PID_PC2] == 0 && k2 == 0, b2_C2?, k2 := 1, x3 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S3 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=3 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==70), take transition SpecC_3.S0->SpecC_3.S0 { 1, a2_C2!, w := w + 1 }
+SpecS_3_PC2.S3->SpecS_3_PC2.S4 { flag[PID_R2] == 0 && flag[PID_PC2] == 3 && k2 == 0, a2_C2?, k2 := 1, x3 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=3 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==71), take transition SpecC_3.S0->SpecC_3.S0 { 1, b2_B!, w := w + 1 }
+SpecS_5_Buffer_b.S0->SpecS_5_Buffer_b.S2 { flag[PID_R2] == 3 && flag[PID_B] == 0 && k2 == 0, b2_B?, k2 := 1, x4 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=3 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==72), take transition SpecC_1.S0->SpecC_1.S0 { 1, a1_B!, w := w + 1 }
+SpecS_4_Buffer_a.S0->SpecS_4_Buffer_a.S1 { flag[PID_R1] == 0 && flag[PID_B] == 3 && k1 == 0, a1_B?, k1 := 1, x4 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=3 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==73), take transition SpecC_2.S0->SpecC_2.S0 { 1, b1_L!, w := w + 1 }
+SpecS_1_LEL.S0->SpecS_1_LEL.S2 { flag[PID_R1] == 3 && k1 == 0, b1_L?, k1 := 1, x1 := 0 }
+
+State: ( SpecS_1_LEL.S0 SpecS_2_PC1.S0 SpecS_3_PC2.S0 SpecS_4_Buffer_a.S0 SpecS_5_Buffer_b.S0 SpecC_1.S0 SpecC_2.S0 SpecC_3.S0 ) k1=0 k2=0 flag[0]=0 flag[1]=0 flag[2]=0 flag[3]=0 flag[4]=0 flag[5]=0 PID_R1=0 PID_R2=1 PID_LEL=2 PID_PC1=3 PID_PC2=4 PID_B=5 
+When you are in (Global==74), take transition SpecC_1.S0->SpecC_1.S0 { 1, a1_L!, w := w + 1 }
+SpecS_1_LEL.S0->SpecS_1_LEL.S1 { flag[PID_R1] == 0 && k1 == 0, a1_L?, k1 := 1, x1 := 0 }
+
+

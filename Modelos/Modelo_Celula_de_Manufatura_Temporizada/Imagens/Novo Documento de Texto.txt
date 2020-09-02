@@ -1,0 +1,15 @@
+clock t1,t2,tp,Global;
+
+int p=0,w=0;
+
+
+chan a11,a12,a21,a22,b11,b12,b21,b22;    	    
+chan bf12, bf21;	   			   
+
+
+
+system 
+
+SpecS_1, SpecS_2, SpecS_3, 
+
+SpecC_1, SpecC_2, SpecC_3,

@@ -1,0 +1,110 @@
+Options for the verification:
+  Generating some trace
+  Search order is breadth first (UPPAAL), automatic (TIGA)
+  Using conservative space optimisation
+  Seed is 1532657667
+  State space representation uses minimal constraint systems
+[2K
+Verifying property 1 at line 6
+ -- Throughput: 4513 states/sec, Size: 25 states, Load: 7 states[K -- Throughput: 98498 states/sec, Size: 182 states, Load: 38 states[K -- Throughput: 118941 states/sec, Size: 1423 states, Load: 73 states[KPreparing: 0%[KPreparing: 1%[KPreparing: 2%[KPreparing: 3%[KPreparing: 4%[KPreparing: 5%[KPreparing: 6%[KPreparing: 7%[KPreparing: 8%[KPreparing: 9%[KPreparing: 10%[KPreparing: 11%[KPreparing: 12%[KPreparing: 13%[KPreparing: 14%[KPreparing: 15%[KPreparing: 16%[KPreparing: 17%[KPreparing: 18%[KPreparing: 19%[KPreparing: 20%[KPreparing: 21%[KPreparing: 22%[KPreparing: 23%[KPreparing: 24%[KPreparing: 25%[KPreparing: 26%[KPreparing: 27%[KPreparing: 28%[KPreparing: 29%[KPreparing: 30%[KPreparing: 31%[KPreparing: 32%[KPreparing: 33%[KPreparing: 34%[KPreparing: 35%[KPreparing: 36%[KPreparing: 37%[KPreparing: 38%[KPreparing: 39%[KPreparing: 40%[KPreparing: 41%[KPreparing: 42%[KPreparing: 43%[KPreparing: 44%[KPreparing: 45%[KPreparing: 46%[KPreparing: 47%[KPreparing: 48%[KPreparing: 49%[KPreparing: 50%[KPreparing: 51%[KPreparing: 52%[KPreparing: 53%[KPreparing: 54%[KPreparing: 55%[KPreparing: 56%[KPreparing: 57%[KPreparing: 58%[KPreparing: 59%[KPreparing: 60%[KPreparing: 61%[KPreparing: 62%[KPreparing: 63%[KPreparing: 64%[KPreparing: 65%[KPreparing: 66%[KPreparing: 67%[KPreparing: 68%[KPreparing: 69%[KPreparing: 70%[KPreparing: 71%[KPreparing: 72%[KPreparing: 73%[KPreparing: 74%[KPreparing: 75%[KPreparing: 76%[KPreparing: 77%[KPreparing: 78%[KPreparing: 79%[KPreparing: 80%[KPreparing: 81%[KPreparing: 82%[KPreparing: 83%[KPreparing: 84%[KPreparing: 85%[KPreparing: 86%[KPreparing: 87%[KPreparing: 88%[KPreparing: 89%[KPreparing: 90%[KPreparing: 91%[KPreparing: 92%[KPreparing: 93%[KPreparing: 94%[KPreparing: 95%[KPreparing: 96%[KPreparing: 97%[KPreparing: 98%[KPreparing: 99%[K[2K -- Property is satisfied.
+Initial state:
+( M1.S0 M2.S0 E1.S0 E2.S0 E3.S0 E4.S0 E5.S0 ) p=0 w=0 
+(t1==t2 && t2==tp && tp==Global && Global==0)
+
+Strategy to win:
+
+State: ( M1.S2 M2.S4 E1.S0 E2.S0 E3.S0 E4.S0 E5.S0 ) p=2 w=22 
+When you are in (t2-Global==-19 && Global==19), take transition E5.S0->E5.S0 { 1, b12!, 1 }
+M1.S2->M1.S3 { 1, b12?, t1 := 0, w := w + 1 }
+
+State: ( M1.S0 M2.S2 E1.S1 E2.S1 E3.S1 E4.S0 E5.S0 ) p=0 w=9 
+When you are in (Global==8), take transition E2.S1->E2.S0 { 1, a12!, 1 }
+M1.S0->M1.S1 { 1, a12?, t1 := 0, w := w + 1 }
+
+State: ( M1.S0 M2.S2 E1.S1 E2.S1 E3.S1 E4.S0 E5.S0 ) p=1 w=17 
+When you are in (Global==15), take transition E2.S1->E2.S0 { 1, a12!, 1 }
+M1.S0->M1.S1 { 1, a12?, t1 := 0, w := w + 1 }
+
+State: ( M1.S4 M2.S0 E1.S0 E2.S0 E3.S0 E4.S0 E5.S0 ) p=0 w=1 
+When you are in (t1==Global && Global==0), take transition E4.S0->E4.S0 { 1, a22!, 1 }
+M2.S0->M2.S1 { 1, a22?, t2 := 0, w := w + 1 }
+
+State: ( M1.S6 M2.S0 E1.S1 E2.S1 E3.S1 E4.S0 E5.S0 ) p=1 w=16 
+When you are in (t1==2 && t1-Global==-12 && Global==14), take transition E4.S0->E4.S0 { 1, a22!, 1 }
+M2.S0->M2.S1 { 1, a22?, t2 := 0, w := w + 1 }
+
+State: ( M1.S1 M2.S2 E1.S1 E2.S0 E3.S1 E4.S0 E5.S0 ) p=0 w=10 
+When you are in (t1-Global==-8 && Global==8), take transition E2.S0->E2.S1 { 1, b22!, 1 }
+M2.S2->M2.S3 { 1, b22?, t2 := 0, w := w + 1 }
+
+State: ( M1.S2 M2.S0 E1.S1 E2.S0 E3.S0 E4.S0 E5.S0 ) p=2 w=21 
+When you are in (Global==19), take transition E1.S1->E1.S0 { 1, a21!, 1 }
+M2.S0->M2.S4 { 1, a21?, t2 := 0, w := w + 1 }
+
+State: ( M1.S6 M2.S5 E1.S1 E2.S1 E3.S0 E4.S0 E5.S0 ) p=1 w=15 
+When you are in (t1==1 && t1-Global==-12 && Global==13), take transition E5.S0->E5.S0 { 1, b21!, 1 }
+M2.S5->M2.S6 { 1, b21?, t2 := 0, w := w + 1 }
+
+State: ( M1.S3 M2.S5 E1.S0 E2.S0 E3.S0 E4.S0 E5.S0 ) p=2 w=23 
+When you are in (t1==1 && t1-Global==-19 && Global==20), take transition E5.S0->E5.S0 { 1, b21!, 1 }
+M2.S5->M2.S6 { 1, b21?, t2 := 0, w := w + 1 }
+
+State: ( M1.S5 M2.S0 E1.S1 E2.S1 E3.S0 E4.S0 E5.S0 ) p=0 w=5 
+When you are in (Global==5), take transition E1.S1->E1.S0 { 1, a21!, 1 }
+M2.S0->M2.S4 { 1, a21?, t2 := 0, w := w + 1 }
+
+State: ( M1.S1 M2.S2 E1.S1 E2.S0 E3.S1 E4.S0 E5.S0 ) p=1 w=18 
+When you are in (t1-Global==-15 && Global==15), take transition E2.S0->E2.S1 { 1, b22!, 1 }
+M2.S2->M2.S3 { 1, b22?, t2 := 0, w := w + 1 }
+
+State: ( M1.S0 M2.S0 E1.S0 E2.S0 E3.S0 E4.S0 E5.S0 ) p=0 w=0 
+When you are in (Global==0), take transition E4.S0->E4.S0 { 1, a11!, 1 }
+M1.S0->M1.S4 { 1, a11?, t1 := 0, w := w + 1 }
+
+State: ( M1.S5 M2.S2 E1.S0 E2.S0 E3.S0 E4.S0 E5.S0 ) p=0 w=2 
+When you are in (Global==1), take transition E1.S0->E1.S1 { 1, b11!, 1 }
+M1.S5->M1.S6 { 1, b11?, t1 := 0, w := w + 1 }
+
+State: ( M1.S6 M2.S2 E1.S1 E2.S0 E3.S0 E4.S0 E5.S0 ) p=0 w=3 
+When you are in (t1-Global==-1 && Global==1), take transition E2.S0->E2.S1 { 1, b22!, 1 }
+M2.S2->M2.S3 { 1, b22?, t2 := 0, w := w + 1 }
+
+State: ( M1.S0 M2.S3 E1.S1 E2.S1 E3.S0 E4.S0 E5.S0 ) p=1 w=12 
+When you are in (t2==3 && t2-Global==-8 && Global==11), take transition E4.S0->E4.S0 { 1, a11!, 1 }
+M1.S0->M1.S4 { 1, a11?, t1 := 0, w := w + 1 }
+
+State: ( M1.S6 M2.S0 E1.S1 E2.S1 E3.S1 E4.S0 E5.S0 ) p=0 w=8 
+When you are in (t1==2 && t1-Global==-5 && Global==7), take transition E4.S0->E4.S0 { 1, a22!, 1 }
+M2.S0->M2.S1 { 1, a22?, t2 := 0, w := w + 1 }
+
+State: ( M1.S0 M2.S3 E1.S1 E2.S1 E3.S0 E4.S0 E5.S0 ) p=0 w=4 
+When you are in (t2==3 && t2-Global==-1 && Global==4), take transition E4.S0->E4.S0 { 1, a11!, 1 }
+M1.S0->M1.S4 { 1, a11?, t1 := 0, w := w + 1 }
+
+State: ( M1.S2 M2.S3 E1.S1 E2.S1 E3.S1 E4.S0 E5.S0 ) p=1 w=19 
+When you are in (t2==1 && t2-Global==-15 && Global==16), take transition E5.S0->E5.S0 { 1, b12!, 1 }
+M1.S2->M1.S3 { 1, b12?, t1 := 0, w := w + 1 }
+
+State: ( M1.S6 M2.S5 E1.S1 E2.S1 E3.S0 E4.S0 E5.S0 ) p=0 w=7 
+When you are in (t1==1 && t1-Global==-5 && Global==6), take transition E5.S0->E5.S0 { 1, b21!, 1 }
+M2.S5->M2.S6 { 1, b21?, t2 := 0, w := w + 1 }
+
+State: ( M1.S5 M2.S4 E1.S0 E2.S1 E3.S0 E4.S0 E5.S0 ) p=0 w=6 
+When you are in (t2-Global==-5 && Global==5), take transition E1.S0->E1.S1 { 1, b11!, 1 }
+M1.S5->M1.S6 { 1, b11?, t1 := 0, w := w + 1 }
+
+State: ( M1.S5 M2.S0 E1.S1 E2.S1 E3.S0 E4.S0 E5.S0 ) p=1 w=13 
+When you are in (Global==12), take transition E1.S1->E1.S0 { 1, a21!, 1 }
+M2.S0->M2.S4 { 1, a21?, t2 := 0, w := w + 1 }
+
+State: ( M1.S5 M2.S4 E1.S0 E2.S1 E3.S0 E4.S0 E5.S0 ) p=1 w=14 
+When you are in (t2-Global==-12 && Global==12), take transition E1.S0->E1.S1 { 1, b11!, 1 }
+M1.S5->M1.S6 { 1, b11?, t1 := 0, w := w + 1 }
+
+State: ( M1.S0 M2.S3 E1.S1 E2.S1 E3.S0 E4.S0 E5.S0 ) p=2 w=20 
+When you are in (t2==3 && t2-Global==-15 && Global==18), take transition E2.S1->E2.S0 { 1, a12!, 1 }
+M1.S0->M1.S1 { 1, a12?, t1 := 0, w := w + 1 }
+
+State: ( M1.S2 M2.S3 E1.S1 E2.S1 E3.S1 E4.S0 E5.S0 ) p=0 w=11 
+When you are in (t2==1 && t2-Global==-8 && Global==9), take transition E5.S0->E5.S0 { 1, b12!, 1 }
+M1.S2->M1.S3 { 1, b12?, t1 := 0, w := w + 1 }

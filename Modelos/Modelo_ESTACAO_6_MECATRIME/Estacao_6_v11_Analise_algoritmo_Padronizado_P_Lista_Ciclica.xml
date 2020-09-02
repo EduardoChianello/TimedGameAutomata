@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_1.dtd'><nta><declaration>clock sc1,sc2,ss1,ss2,ss3,ss4,ss5,ss6,bs1,bs2,bs3;
+clock Global,Prod;
+
+//canal de comunicação dos eventos de comando do MANAGER
+chan a0, a1, a2;
+chan b0, b1, b2;
+chan c0, c1, c2;
+chan d0, d1, d2;
+chan Prd;
+
+int k:=0; // K==0 robô livre, k==1 robô ocupado, k==2 robo pronto para o feed5
+int k1:=0; // k1==0 robo livre, k1==1 robo esta com uma peça na garra, e não pode dar outro get.
+int k2:=0; //representa se a verificaçao esta acontecendo ou já terminou.
+int Verify:=0; // variavel que indica que a verificação ocorreu
+int Production:=0; //Numero de produções. Toda vez que um ballgame chega no ASRS, essa variavel é incrementada
+//int w:=0; // variavel de contagem de eventos
+
+/////////////////////////Estação/////////////////////////////////
+int flag_ST6[14] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0}; //Estado dos componentes da planta
+
+int PID_G1:=0; 		//Indica o que o robo esta segurando
+int PID_G2:=1; 		//Inspeção visual
+int PID_G3_1:=2;	//Buffer 1 slot 1
+int PID_G3_2:=3;	//Buffer 1 slot 2
+int PID_G4_1:=4;	//Buffer 2 slot 1
+int PID_G4_2:=5;	//Buffer 2 slot 2
+int PID_G5:=6;		//Morsa
+int PID_G6:=7;
+int PID_G7:=8;
+int PID_G8:=9;
+
+/////////////////////////Pallet//////////////////////////////////
+int PID_ASRS:=0; //ID referente ao pick and place do ASRS
+int Order_ASRS:=0; //Ordem de parada na estação ASRS, Quando igual a 1, ele é travado na estação.
+
+////////////////Insumo/////////////////////////////
+int Base:=12;
+int Cover:=12;
+
+////////////////////////////////////////////////////
+// Valores de PID de para cada peça
+// 0 - vazio
+// 1 - template vazio // apenas para os pallets e para os buffers.
+// 2 - template com Base
+// 3 - template com Tampa
+// 4 - Base
+// 5 - Tampa
+// 6 - Base com esferas
+// 7 - base com esferas e com cola
+// 8 - Base com cola, esferas e tampa
+// 9 - BallGame
+// 10 - Template com BG</declaration><template><name>SpecC_1</name><location id="id0" x="-512" y="80"><name x="-520" y="96">S1</name></location><location id="id1" x="-512" y="-32"><name x="-522" y="-62">S0</name></location><init ref="id1"/><transition action=""><source ref="id1"/><target ref="id0"/><label kind="synchronisation" x="-472" y="8">d1!</label><nail x="-472" y="24"/></transition><transition action=""><source ref="id0"/><target ref="id1"/><label kind="synchronisation" x="-424" y="8">a0!</label><nail x="-432" y="80"/><nail x="-432" y="-32"/></transition><transition action=""><source ref="id1"/><target ref="id0"/><label kind="synchronisation" x="-576" y="8">d0!</label><nail x="-552" y="24"/></transition></template><template><name>SpecC_2</name><location id="id2" x="-528" y="-144"><name x="-536" y="-128">S0</name></location><init ref="id2"/><transition action=""><source ref="id2"/><target ref="id2"/><label kind="synchronisation" x="-536" y="-216">b0!</label><nail x="-560" y="-192"/><nail x="-496" y="-192"/></transition></template><template><name>SpecC_3</name><location id="id3" x="-272" y="-16"><name x="-280" y="0">S0</name></location><init ref="id3"/><transition action=""><source ref="id3"/><target ref="id3"/><label kind="synchronisation" x="-280" y="-88">b1!</label><nail x="-304" y="-64"/><nail x="-240" y="-64"/></transition></template><template><name>SpecC_4</name><location id="id4" x="-368" y="-16"><name x="-376" y="0">S0</name></location><init ref="id4"/><transition action=""><source ref="id4"/><target ref="id4"/><label kind="synchronisation" x="-376" y="-88">b2!</label><nail x="-400" y="-64"/><nail x="-336" y="-64"/></transition></template><template><name>SpecC_7</name><location id="id5" x="-48" y="-16"><name x="-56" y="0">S0</name></location><init ref="id5"/><transition action=""><source ref="id5"/><target ref="id5"/><label kind="synchronisation" x="-56" y="-88">a1!</label><nail x="-80" y="-64"/><nail x="-16" y="-64"/></transition></template><template><name>SpecC_8</name><location id="id6" x="-80" y="-48"><name x="-88" y="-32">S0</name></location><init ref="id6"/><transition action=""><source ref="id6"/><target ref="id6"/><label kind="synchronisation" x="-88" y="-120">a2!</label><nail x="-112" y="-96"/><nail x="-48" y="-96"/></transition></template><template><name>SpecS_G001</name><location id="id7" x="-336" y="-80"><name x="-346" y="-110">S1</name></location><location id="id8" x="-144" y="-80"><name x="-154" y="-110">S2</name><label kind="invariant" x="-144" y="-72">ss1&lt;=8</label></location><init ref="id7"/><transition controllable="false" action=""><source ref="id8"/><target ref="id7"/><label kind="guard" x="-312" y="-32">ss1==8</label><label kind="assignment" x="-312" y="-16">k:=0,k1:=1</label><nail x="-144" y="-32"/><nail x="-336" y="-32"/></transition><transition action=""><source ref="id7"/><target ref="id8"/><label kind="guard" x="-312" y="-184">k==0 &amp;&amp; k1==0 &amp;&amp; sc1==88</label><label kind="synchronisation" x="-312" y="-168">a0?</label><label kind="assignment" x="-312" y="-152">k:=1,ss1:=0,
+flag_ST6[PID_G1]:=PID_ASRS,
+Order_ASRS:=0</label></transition></template><template><name>SpecS_P001</name><declaration>clock t;</declaration><location id="id9" x="-368" y="-80"><name x="-378" y="-110">S0</name></location><location id="id10" x="-176" y="-80"><name x="-186" y="-110">S1</name><label kind="invariant" x="-176" y="-72">ss2&lt;=6</label></location><init ref="id9"/><transition controllable="false" action=""><source ref="id10"/><target ref="id9"/><label kind="guard" x="-344" y="-32">ss2==6</label><label kind="synchronisation" x="-344" y="0">Prd!</label><label kind="assignment" x="-344" y="-16">k:=0,k1:=0</label><nail x="-176" y="-32"/><nail x="-184" y="-32"/><nail x="-360" y="-32"/><nail x="-368" y="-32"/></transition><transition action=""><source ref="id9"/><target ref="id10"/><label kind="guard" x="-344" y="-168">k==0 &amp;&amp; flag_ST6[PID_G1]==10</label><label kind="synchronisation" x="-344" y="-152">b0?</label><label kind="assignment" x="-344" y="-136">k:=1,ss2:=0,
+flag_ST6[PID_G1]:=0</label></transition></template><template><name>SpecS_G061</name><location id="id11" x="-720" y="-80"><name x="-752" y="-104">S0</name></location><location id="id12" x="-334" y="-82"><name x="-320" y="-104">S1</name><label kind="invariant" x="-320" y="-72">ss3&lt;=9</label></location><init ref="id11"/><transition action=""><source ref="id11"/><target ref="id12"/><label kind="guard" x="-640" y="8">k==0 &amp;&amp;
+k1==0 &amp;&amp;
+flag_ST6[PID_G1]==0 &amp;&amp;
+(flag_ST6[PID_G3_2]==2 ||
+flag_ST6[PID_G3_2]==3)</label><label kind="synchronisation" x="-640" y="80">a1?</label><label kind="assignment" x="-640" y="96">k:=1,ss3:=0,
+flag_ST6[PID_G1]:=(flag_ST6[PID_G3_2]+2),
+flag_ST6[PID_G3_2]:=1</label><nail x="-704" y="160"/><nail x="-352" y="160"/></transition><transition action=""><source ref="id11"/><target ref="id12"/><label kind="guard" x="-640" y="-152">k==0 &amp;&amp;
+k1==0 &amp;&amp;
+flag_ST6[PID_G1]==0 &amp;&amp;
+(flag_ST6[PID_G3_1]==2 ||
+flag_ST6[PID_G3_1]==3)</label><label kind="synchronisation" x="-640" y="-80">a1?</label><label kind="assignment" x="-640" y="-64">k:=1,ss3:=0,
+flag_ST6[PID_G1]:=(flag_ST6[PID_G3_1]+2),
+flag_ST6[PID_G3_1]:=1</label><nail x="-672" y="0"/><nail x="-384" y="0"/></transition><transition action=""><source ref="id11"/><target ref="id12"/><label kind="guard" x="-640" y="-312">k==0 &amp;&amp;
+k1==0 &amp;&amp; 
+flag_ST6[PID_G1]==0 &amp;&amp;
+(flag_ST6[PID_G3_2]==1 ||
+flag_ST6[PID_G3_2]==10)</label><label kind="synchronisation" x="-640" y="-240">a1?</label><label kind="assignment" x="-640" y="-224">k:=1,ss3:=0,
+flag_ST6[PID_G1]:=flag_ST6[PID_G3_2],
+flag_ST6[PID_G3_2]:=0</label><nail x="-672" y="-160"/><nail x="-384" y="-160"/></transition><transition controllable="false" action=""><source ref="id12"/><target ref="id11"/><label kind="guard" x="-552" y="240">ss3==9</label><label kind="assignment" x="-552" y="256">k:=0,k1:=1</label><nail x="-336" y="240"/><nail x="-720" y="240"/></transition><transition action=""><source ref="id11"/><target ref="id12"/><label kind="guard" x="-640" y="-464">k==0 &amp;&amp;
+k1==0 &amp;&amp;
+flag_ST6[PID_G1]==0 &amp;&amp;
+(flag_ST6[PID_G3_1]==1 ||
+flag_ST6[PID_G3_1]==10)</label><label kind="synchronisation" x="-640" y="-384">a1?</label><label kind="assignment" x="-640" y="-368">k:=1,ss3:=0,flag_ST6[PID_G1]:=flag_ST6[PID_G3_1],
+flag_ST6[PID_G3_1]:=0</label><nail x="-704" y="-320"/><nail x="-352" y="-320"/></transition></template><template><name>SpecS_P061</name><location id="id13" x="-720" y="-80"><name x="-752" y="-104">S0</name></location><location id="id14" x="-334" y="-82"><name x="-320" y="-104">S1</name><label kind="invariant" x="-320" y="-72">ss4&lt;=8</label></location><init ref="id13"/><transition action=""><source ref="id13"/><target ref="id14"/><label kind="guard" x="-640" y="0">k==0 &amp;&amp;
+flag_ST6[PID_G3_2]==1 &amp;&amp;
+flag_ST6[PID_G1]==9 &amp;&amp;
+Verify==1</label><label kind="synchronisation" x="-640" y="64">b1?</label><label kind="assignment" x="-640" y="80">k:=1,ss4:=0,
+flag_ST6[PID_G3_2]:=10,
+flag_ST6[PID_G1]:=0,
+Verify:=0</label><nail x="-704" y="160"/><nail x="-352" y="160"/></transition><transition action=""><source ref="id13"/><target ref="id14"/><label kind="guard" x="-640" y="-160">k==0 &amp;&amp;
+flag_ST6[PID_G3_1]==1 &amp;&amp;
+flag_ST6[PID_G1]==9 &amp;&amp;
+Verify==1</label><label kind="synchronisation" x="-640" y="-96">b1?</label><label kind="assignment" x="-640" y="-80">k:=1,ss4:=0,
+flag_ST6[PID_G3_1]:=10,
+flag_ST6[PID_G1]:=0,
+Verify:=0</label><nail x="-672" y="0"/><nail x="-384" y="0"/></transition><transition action=""><source ref="id13"/><target ref="id14"/><label kind="guard" x="-640" y="-304">k==0 &amp;&amp;
+flag_ST6[PID_G3_2]==0 &amp;&amp;
+(flag_ST6[PID_G1]==2 ||
+flag_ST6[PID_G1]==3)</label><label kind="synchronisation" x="-640" y="-240">b1?</label><label kind="assignment" x="-640" y="-224">k:=1,ss4:=0,
+flag_ST6[PID_G3_2]:=flag_ST6[PID_G1],
+flag_ST6[PID_G1]:=0</label><nail x="-672" y="-160"/><nail x="-384" y="-160"/></transition><transition controllable="false" action=""><source ref="id14"/><target ref="id13"/><label kind="guard" x="-552" y="240">ss4==8</label><label kind="assignment" x="-552" y="256">k:=0,k1:=0</label><nail x="-336" y="240"/><nail x="-720" y="240"/></transition><transition action=""><source ref="id13"/><target ref="id14"/><label kind="guard" x="-640" y="-464">k==0 &amp;&amp;
+flag_ST6[PID_G3_1]==0 &amp;&amp;
+(flag_ST6[PID_G1]==2 ||
+flag_ST6[PID_G1]==3)</label><label kind="synchronisation" x="-640" y="-400">b1?</label><label kind="assignment" x="-640" y="-384">k:=1,ss4:=0,
+flag_ST6[PID_G3_1]:=flag_ST6[PID_G1],
+flag_ST6[PID_G1]:=0</label><nail x="-704" y="-320"/><nail x="-352" y="-320"/></transition></template><template><name>SpecS_G062</name><location id="id15" x="-720" y="-80"><name x="-752" y="-104">S0</name></location><location id="id16" x="-334" y="-82"><name x="-320" y="-104">S1</name><label kind="invariant" x="-320" y="-72">ss5&lt;=9</label></location><init ref="id15"/><transition action=""><source ref="id15"/><target ref="id16"/><label kind="guard" x="-640" y="8">k==0 &amp;&amp;
+k1==0 &amp;&amp;
+flag_ST6[PID_G1]==0 &amp;&amp;
+(flag_ST6[PID_G4_2]==2 ||
+flag_ST6[PID_G4_2]==3)</label><label kind="synchronisation" x="-640" y="80">a2?</label><label kind="assignment" x="-640" y="96">k:=1,ss5:=0,
+flag_ST6[PID_G1]:=(flag_ST6[PID_G4_2]+2),
+flag_ST6[PID_G4_2]:=1</label><nail x="-704" y="160"/><nail x="-352" y="160"/></transition><transition action=""><source ref="id15"/><target ref="id16"/><label kind="guard" x="-640" y="-152">k==0 &amp;&amp;
+k1==0 &amp;&amp;
+flag_ST6[PID_G1]==0 &amp;&amp;
+(flag_ST6[PID_G4_1]==2 ||
+flag_ST6[PID_G4_1]==3)</label><label kind="synchronisation" x="-640" y="-80">a2?</label><label kind="assignment" x="-640" y="-64">k:=1,ss5:=0,
+flag_ST6[PID_G1]:=(flag_ST6[PID_G4_1]+2),
+flag_ST6[PID_G4_1]:=1</label><nail x="-672" y="0"/><nail x="-384" y="0"/></transition><transition action=""><source ref="id15"/><target ref="id16"/><label kind="guard" x="-640" y="-312">k==0 &amp;&amp;
+k1==0 &amp;&amp;
+flag_ST6[PID_G1]==0 &amp;&amp;
+(flag_ST6[PID_G4_2]==1 ||
+flag_ST6[PID_G4_2]==10)</label><label kind="synchronisation" x="-640" y="-240">a2?</label><label kind="assignment" x="-640" y="-224">k:=1,ss5:=0,
+flag_ST6[PID_G1]:=flag_ST6[PID_G4_2],
+flag_ST6[PID_G4_2]:=0</label><nail x="-672" y="-160"/><nail x="-384" y="-160"/></transition><transition controllable="false" action=""><source ref="id16"/><target ref="id15"/><label kind="guard" x="-552" y="240">ss5==9</label><label kind="assignment" x="-552" y="256">k:=0,k1:=1</label><nail x="-336" y="240"/><nail x="-720" y="240"/></transition><transition action=""><source ref="id15"/><target ref="id16"/><label kind="guard" x="-640" y="-480">k==0 &amp;&amp;
+k1==0 &amp;&amp;
+flag_ST6[PID_G1]==0 &amp;&amp;
+(flag_ST6[PID_G4_1]==1 ||
+flag_ST6[PID_G4_1]==10)</label><label kind="synchronisation" x="-640" y="-400">a2?</label><label kind="assignment" x="-640" y="-384">k:=1,ss5:=0,
+flag_ST6[PID_G1]:=flag_ST6[PID_G4_1],
+flag_ST6[PID_G4_1]:=0</label><nail x="-704" y="-320"/><nail x="-352" y="-320"/></transition></template><template><name>SpecS_P062</name><location id="id17" x="-720" y="-80"><name x="-752" y="-104">S0</name></location><location id="id18" x="-334" y="-82"><name x="-320" y="-104">S1</name><label kind="invariant" x="-320" y="-72">ss6&lt;=8</label></location><init ref="id17"/><transition action=""><source ref="id17"/><target ref="id18"/><label kind="guard" x="-640" y="8">k==0 &amp;&amp;
+flag_ST6[PID_G4_2]==1 &amp;&amp;
+flag_ST6[PID_G1]==9 &amp;&amp;
+Verify==1</label><label kind="synchronisation" x="-640" y="64">b2?</label><label kind="assignment" x="-640" y="80">k:=1,ss6:=0,
+flag_ST6[PID_G4_2]:=10,
+flag_ST6[PID_G1]:=0,
+Verify:=0</label><nail x="-704" y="160"/><nail x="-352" y="160"/></transition><transition action=""><source ref="id17"/><target ref="id18"/><label kind="guard" x="-640" y="-160">k==0 &amp;&amp;
+flag_ST6[PID_G4_1]==1 &amp;&amp;
+flag_ST6[PID_G1]==9 &amp;&amp;
+Verify==1</label><label kind="synchronisation" x="-640" y="-96">b2?</label><label kind="assignment" x="-640" y="-80">k:=1,ss6:=0,
+flag_ST6[PID_G4_1]:=10,
+flag_ST6[PID_G1]:=0,
+Verify:=0</label><nail x="-672" y="0"/><nail x="-384" y="0"/></transition><transition action=""><source ref="id17"/><target ref="id18"/><label kind="guard" x="-640" y="-304">k==0 &amp;&amp;
+flag_ST6[PID_G4_2]==0 &amp;&amp;
+(flag_ST6[PID_G1]==2 ||
+flag_ST6[PID_G1]==3)</label><label kind="synchronisation" x="-640" y="-240">b2?</label><label kind="assignment" x="-640" y="-224">k:=1,ss6:=0, 
+flag_ST6[PID_G4_2]:=flag_ST6[PID_G1],
+flag_ST6[PID_G1]:=0</label><nail x="-672" y="-160"/><nail x="-384" y="-160"/></transition><transition controllable="false" action=""><source ref="id18"/><target ref="id17"/><label kind="guard" x="-552" y="240">ss6==8</label><label kind="assignment" x="-552" y="256">k:=0,k1:=0</label><nail x="-336" y="240"/><nail x="-720" y="240"/></transition><transition action=""><source ref="id17"/><target ref="id18"/><label kind="guard" x="-640" y="-464">k==0 &amp;&amp;
+flag_ST6[PID_G4_1]==0 &amp;&amp;
+(flag_ST6[PID_G1]==2 ||
+flag_ST6[PID_G1]==3)</label><label kind="synchronisation" x="-640" y="-400">b2?</label><label kind="assignment" x="-640" y="-384">k:=1,ss6:=0,
+flag_ST6[PID_G4_1]:=flag_ST6[PID_G1],
+flag_ST6[PID_G1]:=0</label><nail x="-704" y="-320"/><nail x="-352" y="-320"/></transition></template><template><name>Bloco_1_C</name><location id="id19" x="-304" y="-80"><name x="-312" y="-64">S0</name></location><init ref="id19"/><transition action=""><source ref="id19"/><target ref="id19"/><label kind="synchronisation" x="-312" y="-152">c0!</label><nail x="-336" y="-128"/><nail x="-272" y="-128"/></transition></template><template><name>Bloco_2_C</name><location id="id20" x="-112" y="16"><name x="-120" y="32">S0</name></location><init ref="id20"/><transition action=""><source ref="id20"/><target ref="id20"/><label kind="synchronisation" x="-120" y="-56">c1!</label><nail x="-144" y="-32"/><nail x="-80" y="-32"/></transition></template><template><name>Bloco_3_C</name><location id="id21" x="-1008" y="-112"><name x="-1016" y="-96">S0</name></location><init ref="id21"/><transition action=""><source ref="id21"/><target ref="id21"/><label kind="synchronisation" x="-1016" y="-184">c2!</label><nail x="-1040" y="-160"/><nail x="-976" y="-160"/></transition></template><template><name>Bloco_1_S</name><location id="id22" x="-48" y="-80"><name x="-58" y="-110">S1</name><label kind="invariant" x="-40" y="-64">bs1&lt;=53</label></location><location id="id23" x="-240" y="-80"><name x="-250" y="-110">S0</name></location><init ref="id23"/><transition controllable="false" action=""><source ref="id22"/><target ref="id23"/><label kind="guard" x="-216" y="-24">bs1==53</label><label kind="assignment" x="-216" y="-8">flag_ST6[PID_G5]:=7,
+flag_ST6[PID_G1]:=0,
+k:=0,
+k1:=0</label><nail x="-48" y="-32"/><nail x="-240" y="-32"/></transition><transition action=""><source ref="id23"/><target ref="id22"/><label kind="guard" x="-216" y="-160">k==0 &amp;&amp; flag_ST6[PID_G1]==4</label><label kind="synchronisation" x="-216" y="-144">c0?</label><label kind="assignment" x="-216" y="-129">bs1:=0,
+k:=1</label></transition></template><template><name>Bloco_2_S</name><location id="id24" x="-48" y="-80"><name x="-58" y="-110">S1</name><label kind="invariant" x="-40" y="-64">bs2&lt;=69</label></location><location id="id25" x="-240" y="-80"><name x="-250" y="-110">S0</name></location><init ref="id25"/><transition controllable="false" action=""><source ref="id24"/><target ref="id25"/><label kind="guard" x="-216" y="-16">bs2==69</label><label kind="assignment" x="-216" y="0">flag_ST6[PID_G1]:=0,
+flag_ST6[PID_G2]:=9,
+flag_ST6[PID_G5]:=0,
+k:=0,
+k1:=0,
+bs2:=0</label><nail x="-48" y="-24"/><nail x="-240" y="-24"/></transition><transition action=""><source ref="id25"/><target ref="id24"/><label kind="guard" x="-216" y="-192">flag_ST6[PID_G5]==7 &amp;&amp;
+flag_ST6[PID_G1]==5 &amp;&amp; k==0</label><label kind="synchronisation" x="-216" y="-161">c1?</label><label kind="assignment" x="-216" y="-144">flag_ST6[PID_G1]:=0,
+bs2:=0,
+k:=1</label></transition></template><template><name>Bloco_3_S</name><location id="id26" x="-592" y="184"><name x="-602" y="154">S2</name><label kind="invariant" x="-608" y="200">bs3&lt;=20</label></location><location id="id27" x="-416" y="-48"><name x="-416" y="-80">S1</name><label kind="invariant" x="-408" y="-32">bs3&lt;=20</label></location><location id="id28" x="-744" y="-48"><name x="-760" y="-80">S0</name></location><init ref="id28"/><transition controllable="false" action=""><source ref="id26"/><target ref="id28"/><label kind="guard" x="-912" y="96">flag_ST6[PID_G1]==0 &amp;&amp;
+Production!=100 &amp;&amp; 
+bs3==20</label><label kind="assignment" x="-912" y="144">flag_ST6[PID_G1]:=9,
+flag_ST6[PID_G2]:=0,
+Verify:=1,
+k2:=0</label><nail x="-744" y="184"/></transition><transition action=""><source ref="id27"/><target ref="id26"/><label kind="guard" x="-408" y="88">flag_ST6[PID_G1]==1 &amp;&amp;
+bs3&lt;=14</label><label kind="synchronisation" x="-408" y="136">d2?</label><label kind="assignment" x="-408" y="120">flag_ST6[PID_G1]:=0</label><nail x="-416" y="184"/></transition><transition action=""><source ref="id28"/><target ref="id27"/><label kind="guard" x="-672" y="-120">flag_ST6[PID_G2]==9 &amp;&amp;
+Verify==0 &amp;&amp; k2==0</label><label kind="synchronisation" x="-672" y="-88">c2?</label><label kind="assignment" x="-672" y="-72">k2:=1,bs3:=0</label><nail x="-600" y="-48"/></transition><transition controllable="false" action=""><source ref="id27"/><target ref="id28"/><label kind="guard" x="-664" y="40">flag_ST6[PID_G1]==0 &amp;&amp;
+Production!=100 &amp;&amp; 
+bs3==20</label><label kind="assignment" x="-664" y="88">flag_ST6[PID_G1]:=9,
+flag_ST6[PID_G2]:=0,
+Verify:=1,
+k2:=0</label><nail x="-464" y="40"/><nail x="-696" y="40"/></transition><transition controllable="false" action=""><source ref="id27"/><target ref="id28"/><label kind="guard" x="-672" y="-200">Production==100 &amp;&amp; bs3==20</label><label kind="assignment" x="-672" y="-184">flag_ST6[PID_G2]:=0,
+k2:=0</label><nail x="-464" y="-144"/><nail x="-696" y="-144"/></transition></template><template><name>ASRS_Esteira</name><location id="id29" x="-560" y="-80"><name x="-570" y="-110">S0</name></location><init ref="id29"/><transition action=""><source ref="id29"/><target ref="id29"/><label kind="guard" x="-608" y="-31">Cover!=0 &amp;&amp; Order_ASRS==0</label><label kind="synchronisation" x="-608" y="-15">d1?</label><label kind="assignment" x="-608" y="0">sc1:=0,
+Cover=Cover-1,
+Order_ASRS:=1,
+PID_ASRS:=3</label><nail x="-608" y="-32"/><nail x="-512" y="-32"/></transition><transition action=""><source ref="id29"/><target ref="id29"/><label kind="guard" x="-608" y="-238">Base!=0 &amp;&amp; Order_ASRS==0</label><label kind="synchronisation" x="-608" y="-223">d0?</label><label kind="assignment" x="-608" y="-208">sc1:=0,
+Base=Base-1,
+Order_ASRS:=1,
+PID_ASRS:=2</label><nail x="-608" y="-128"/><nail x="-512" y="-128"/></transition></template><template><name>SpecS_Fim_de_Producao</name><location id="id30" x="-360" y="-144"><label kind="invariant" x="-344" y="-136">sc2&lt;=30</label></location><location id="id31" x="-528" y="-144"></location><init ref="id31"/><transition controllable="false" action=""><source ref="id30"/><target ref="id31"/><label kind="guard" x="-512" y="-104">sc2==30</label><label kind="assignment" x="-512" y="-88">Production:=Production+1,
+Prod:=0</label><nail x="-360" y="-104"/><nail x="-528" y="-104"/></transition><transition controllable="false" action=""><source ref="id31"/><target ref="id30"/><label kind="synchronisation" x="-512" y="-224">Prd?</label><label kind="assignment" x="-512" y="-208">sc2:=0</label><nail x="-528" y="-184"/><nail x="-360" y="-184"/></transition></template><template><name>SpecC_9</name><location id="id32" x="-80" y="-48"><name x="-88" y="-32">S0</name></location><init ref="id32"/><transition action=""><source ref="id32"/><target ref="id32"/><label kind="synchronisation" x="-88" y="-120">d2!</label><nail x="-112" y="-96"/><nail x="-48" y="-96"/></transition></template><system>system
+
+//Modelos das especificações de subrotina GET
+SpecS_G001,SpecS_G061,SpecS_G062,
+
+//ASRS com Esteira
+ASRS_Esteira,
+
+//Modelos das especificações de subrotina PUT
+SpecS_P001,SpecS_P061,SpecS_P062,
+
+// Modelos de Especificações de Controle
+SpecC_1,SpecC_2,SpecC_3,SpecC_4,SpecC_7,SpecC_8,SpecC_9,
+
+// Blocos
+Bloco_1_S,Bloco_2_S,Bloco_3_S,Bloco_1_C,Bloco_2_C,Bloco_3_C,
+
+// Spec de Produção
+SpecS_Fim_de_Producao;
+
+
+
+
+
+</system></nta>
